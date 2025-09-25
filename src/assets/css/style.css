@@ -43,6 +43,34 @@ html { box-sizing: border-box; }
 
 
 
+/* Webfonts */
+
+@font-face {
+	font-family: 'Lexend';
+	font-style: normal;
+	font-weight: 200;
+	font-display: swap;
+	src: url('../webfonts/lexend-v26-latin-ext-200.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Lexend';
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: url('../webfonts/lexend-v26-latin-ext-600.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Lora';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('../webfonts/lora-v37-latin-ext-regular.woff2') format('woff2');
+}
+
+
+
 /* Base */
 
 html {
@@ -336,9 +364,9 @@ hr {
 }
 
 figcaption {
-	font-weight: 300;
 	font-size: 1.6rem;
 	color: var(--text-dark);
+	letter-spacing: 0;
 	text-align: center;
 }
 
@@ -719,7 +747,7 @@ figcaption {
 .label {
 	display: inline-block;
 	padding: .25rem 1.5rem;
-	font-weight: 500;
+	font-weight: 600;
 	font-size: 1.4rem;
 	text-transform: uppercase;
 	border-radius: 99rem;
@@ -846,13 +874,12 @@ figcaption {
 }
 
 .quote__footer {
-	font-weight: 300;
 	font-size: 1.6rem;
 	color: var(--text-dark);
 }
 
 .quote__author {
-	font-weight: 500;
+	font-weight: 600;
 	color: var(--text);
 }
 
@@ -1180,6 +1207,8 @@ body.lightbox-open {
 
 
 /* Utility Classes */
+
+[hidden] { display: none !important; }
 
 .mt-0 { margin-top: 0; }
 .mt-1 { margin-top: 1rem; }
