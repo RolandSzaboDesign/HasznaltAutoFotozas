@@ -521,7 +521,12 @@ figcaption {
 	margin-bottom: 0;
 }
 
-.hero__title--blink:after {
+.hero__highlight {
+	display: block;
+	color: var(--orange);
+}
+
+.hero__highlight--blink:after {
 	content: "";
 	position: relative;
 	top: 1rem;
@@ -535,16 +540,6 @@ figcaption {
 @keyframes blink {
 	0%, 50% { opacity: 1; }
 	51%, 100% { opacity: 0; }
-}
-
-@media only screen and (min-width: 992px) {
-	.hero__title-text {
-		display: block;
-	}
-}
-
-.hero__highlight {
-	color: var(--orange);
 }
 
 @media only screen and (max-width: 767.98px) {
