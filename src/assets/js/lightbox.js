@@ -30,12 +30,12 @@ function updateLightboxImages(index) {
 
 function showLightbox(index) {
 	updateLightboxImages(index);
-	lightbox.classList.add('active');
+	lightbox.classList.add('lightbox--active');
 	document.body.classList.add('lightbox-open');
 }
 
 function hideLightbox() {
-	lightbox.classList.remove('active');
+	lightbox.classList.remove('lightbox--active');
 	document.body.classList.remove('lightbox-open');
 }
 
