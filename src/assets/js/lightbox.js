@@ -3,6 +3,7 @@ const prevBtn = lightbox.querySelector('.lightbox__arrow--prev');
 const nextBtn = lightbox.querySelector('.lightbox__arrow--next');
 const closeBtn = lightbox.querySelector('.lightbox__close');
 const caption = lightbox.querySelector('.lightbox__caption');
+const overlay = lightbox.querySelector('.lightbox__overlay');
 
 const prevImg = lightbox.querySelector('.lightbox__image--prev');
 const currentImg = lightbox.querySelector('.lightbox__image--current');
@@ -82,3 +83,5 @@ lightbox.addEventListener('touchend', (e) => {
 		diff < 0 ? showNext() : showPrev();
 	}
 });
+
+overlay.addEventListener('click', hideLightbox);
