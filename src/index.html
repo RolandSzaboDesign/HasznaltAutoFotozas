@@ -252,34 +252,12 @@ title: Használt Autó Fotózás Budapest
 	<section id="gyik" class="section section--light">
 		<div class="container">
 			<h2 class="section__title">Gyakran Ismételt Kérdések</h2>
-			<details class="faq">
-				<summary class="faq__question">Olcsóbb autónál is megéri a profi fotózás?</summary>
-				<p class="faq__answer">Abszolút. Nem csak az ár számít, hanem hogy kitűnj a sok hasonló hirdetés közül. Ha gyorsabban elmegy a kocsid, már azzal visszahozta az árát.</p>
-			</details>
-			<details class="faq">
-				<summary class="faq__question">Mi van, ha olyan autóm van, amiből rengeteg van fent?</summary>
-				<p class="faq__answer">Pont ezért fontosak a képek. Ha ugyanabból a típusból több száz van, a vevő arra kattint, amelyik jól néz ki. Ez lesz a te hirdetésed.</p>
-			</details>
-			<details class="faq">
-				<summary class="faq__question">És ha ritkaságom van, aminek szűk célközönsége van?</summary>
-				<p class="faq__answer">Akkor pláne! Egy jó fotósorozat azt sugallja, hogy az autódat tényleg vigyáztad, és emiatt kevesebbet akarnak majd alkudni.</p>
-			</details>
-			<details class="faq">
-				<summary class="faq__question">Mikor kapom meg a képeket?</summary>
-				<p class="faq__answer">Még aznap este. Lefotózzuk, hazamész, és mire lazítasz otthon, a képek ott lesznek a postafiókodban.</p>
-			</details>
-			<details class="faq">
-				<summary class="faq__question">Kell valamit előkészítenem?</summary>
-				<p class="faq__answer">Annyit mindenképpen tegyél meg, hogy tisztán hozod az autót a fotózásra. Egy gyors mosás kívül, egy gyors portörlés belül, és már fotózhatunk is. Természetesen csinálhatsz teljeskörű tisztítást is, annál jobb lesz a végeredmény!</p>
-			</details>
-			<details class="faq">
-				<summary class="faq__question">Pontosan mennyi képet kapok?</summary>
-				<p class="faq__answer">Alapesetben 12 darab csinosított képet fogsz kapni; pont annyit, amennyit a Használtautó.hu enged. Ha többre van szükséged, megbeszéljük.</p>
-			</details>
-			<details class="faq">
-				<summary class="faq__question">Őszintén, megéri 30.000 Ft-ot kiadni egy fotózásra?</summary>
-				<p class="faq__answer">Teljesen jogos kérdés. Gondolj bele: ha a képek miatt hamarabb jön a vevő, vagy nem kell annyit alkudnod, már nyertél. Plusz nem kell hónapokig hirdetni és idegeskedni, hogy miért nem viszik el.</p>
-			</details>
+			{% for item in faq %}
+				<details class="faq">
+					<summary class="faq__question">{{ item.question }}</summary>
+					<p class="faq__answer">{{ item.answer }}</p>
+				</details>
+			{% endfor %}
 			<div class="button-and-link">
 				<a class="btn" href="#kapcsolat">Kapcsolatfelvétel</a>
 			</div>
@@ -337,62 +315,6 @@ title: Használt Autó Fotózás Budapest
 	</div>
 </footer>
 
-<dialog id="adatkezeles" class="modal">
-	<div class="modal__content">
-		<h2 class="modal__title">Adatkezelés</h2>
-		<h3>1. Az adatkezelő adatai</h3>
-		<ul class="list">
-			<li><strong>Név:</strong> Szabó Roland egyéni vállalkozó</li>
-			<li><strong>Cím:</strong> 1223 Budapest, Rózsakert utca 19/c</li>
-			<li><strong>Email:</strong> <a href="mailto:hi@rolandszabo.photo" target="_blank" rel="noopener noreferrer">hi@rolandszabo.photo</a></li>
-			<li><strong>Telefon:</strong> <a href="tel:+36205914620">+36 20 591 4620</a></li>
-		</ul>
-		<h3>2. Milyen adatokat kezelek?</h3>
-		<p>A weboldalon található kapcsolatfelvételi űrlap kitöltésekor az alábbi adatokat kérem el:</p>
-		<ul class="list">
-			<li>név</li>
-			<li>telefonszám</li>
-			<li>autó típusa</li>
-		</ul>
-		<p>Más adatot nem gyűjtök. Hírlevél nincs, sütiket (cookie) nem használok.</p>
-		<h3>3. Az adatkezelés célja</h3>
-		<p>Az adatok kezelésének célja kizárólag a kapcsolatfelvétel, időpont-egyeztetés és szolgáltatásaimmal kapcsolatos kommunikáció.</p>
-		<h3>4. Az adatkezelés jogalapja</h3>
-		<p>Az adatkezelés jogalapja a GDPR 6. cikk (1) bekezdés b) pontja: az adatkezelés a szerződés teljesítéséhez, illetve a szerződés megkötését megelőző lépésekhez szükséges. <br><em class="text-yellow">(Magyarul: azért kezelem az adatokat, hogy meg tudjuk beszélni a fotózást.)</em></p>
-		<h3>5. Az adatok tárolásának módja és időtartama</h3>
-		<p>A megadott adatokat a Netlify Forms szolgáltatás közvetítésével kapom meg, és azok a Gmail levelezőrendszeremben kerülnek tárolásra. Az adatokat a kapcsolatfelvétel céljának megszűnéséig őrzöm (pl. amíg a fotózás meg nem történik, vagy amíg kéred a törlésüket)</p>
-		<h3>6. Ki fér hozzá az adatokhoz?</h3>
-		<p>Az adatokhoz kizárólag én, Szabó Roland férek hozzá. Harmadik félnek nem adom tovább. Az oldalon Ahrefs Analytics működik, de az nem kapcsolódik a kapcsolatfelvételi űrlaphoz, és nem gyűjt személyes adatokat.</p>
-		<h3>7. Az érintettek jogai</h3>
-		<p>A GDPR alapján bármikor jogosult vagy:</p>
-		<ul class="list">
-			<li>tájékoztatást kérni arról, hogy milyen adataidat kezelem,</li>
-			<li>kérni azok helyesbítését vagy törlését,</li>
-			<li>kérni az adatkezelés korlátozását,</li>
-			<li>tiltakozni az adatkezelés ellen.</li>
-		</ul>
-		<p>Kérésedet a fenti elérhetőségeim bármelyikén jelezheted, és indokolatlan késedelem nélkül teljesítem.</p>
-		<h3>8. Panasz benyújtása</h3>
-		<p>Amennyiben úgy érzed, hogy megsértettem a személyes adataid védelméhez való jogodat, panasszal élhetsz a Nemzeti Adatvédelmi és Információszabadság Hatóságnál (NAIH):</p>
-		<ul class="list">
-			<li><strong>Székhely:</strong> 1055 Budapest, Falk Miksa utca 9-11.</li>
-			<li><strong>Telefon:</strong> +36 1 391 1400</li>
-			<li><strong>Email:</strong> ugyfelszolgalat@naih.hu</li>
-			<li><strong>Weboldal:</strong> www.naih.hu</li>
-		</ul>
-	</div>
-	<a class="modal__close" onclick="closeModal()"><i class="fas fa-times"></i></a>
-</dialog>
-
-<div class="lightbox" id="lightbox">
-	<div class="lightbox__overlay"></div>
-	<div class="lightbox__container">
-		<img class="lightbox__image lightbox__image--prev">
-		<img class="lightbox__image lightbox__image--current">
-		<img class="lightbox__image lightbox__image--next">
-		<figcaption class="lightbox__caption"></figcaption>
-		<button class="lightbox__close" aria-label="Close"><i class="fas fa-times"></i></button>
-		<button class="lightbox__arrow lightbox__arrow--prev" aria-label="Previous"><i class="fas fa-caret-left"></i></button>
-		<button class="lightbox__arrow lightbox__arrow--next" aria-label="Next"><i class="fas fa-caret-right"></i></button>
-	</div>
-</div>
+{% include "_includes/partials/lightbox.html" %}
+{% include "_includes/partials/privacy-policy.html" %}
+{% include "_includes/partials/schema-faq.liquid" %}

@@ -587,6 +587,7 @@ figcaption {
 
 .slide__image {
 	position: relative;
+	pointer-events: none;
 	background-color: #FFF;
 }
 
