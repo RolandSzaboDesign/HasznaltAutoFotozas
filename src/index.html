@@ -4,6 +4,7 @@ title: Használt Autó Fotózás Budapest
 ---
 
 <script src="/assets/js/modal.js" defer></script>
+<script src="/assets/js/slider.js" defer></script>
 <script src="/assets/js/typing.js" defer></script>
 <script src="/assets/js/lightbox.js" defer></script>
 
@@ -36,21 +37,68 @@ title: Használt Autó Fotózás Budapest
 				</ul>
 				<a class="hero__button btn" href="#miert">Íme a Részletek</a>
 			</article>
-			<div class="slider">
-				<div class="slide">
-					<figure class="slide__image slide__image--before">
-						<img src="/assets/images/before-giulia.webp" alt="Telefonos kép" width="700" height="467" loading="eager" fetchpriority="high" decoding="async">
-						<figcaption>Telefonos kép</figcaption>
-						<i class="slide__icon fas fa-times-circle text-red"></i>
-					</figure>
-					<i class="slide__arrow fas fa-arrow-down"></i>
-					<figure class="slide__image slide__image--after">
-						<img src="/assets/images/after-giulia.webp" alt="Eladásra optimalizált, profi fotó" width="700" height="467" loading="eager" fetchpriority="high" decoding="async">
-						<figcaption class="slide__caption slide__caption--after">Eladásra optimalizált, profi fotó</figcaption>
-						<i class="slide__icon fas fa-check-circle text-green"></i>
-					</figure>
+			<aside>
+				<div id="slider" class="slider" role="region" aria-roledescription="carousel" aria-label="Használt Autó Fotózás slider">
+					<div class="slide" role="group" aria-roledescription="slide" aria-label="1 / 4">
+						<figure class="slide__image slide__image--before">
+							<img src="/assets/images/before-giulia.webp" alt="Telefonos kép" width="700" height="467" loading="eager" fetchpriority="high" decoding="async">
+							<figcaption>Telefonos kép</figcaption>
+							<i class="slide__icon fas fa-times-circle text-red"></i>
+						</figure>
+						<i class="slide__arrow fas fa-arrow-down"></i>
+						<figure class="slide__image slide__image--after">
+							<img src="/assets/images/after-giulia.webp" alt="Eladásra optimalizált, profi fotó" width="700" height="467" loading="eager" fetchpriority="high" decoding="async">
+							<figcaption class="slide__caption slide__caption--after">Eladásra optimalizált, profi fotó</figcaption>
+							<i class="slide__icon fas fa-check-circle text-green"></i>
+						</figure>
+					</div>
+					<div class="slide" role="group" aria-roledescription="slide" aria-label="2 / 4">
+						<figure class="slide__image slide__image--before">
+							<img src="/assets/images/before-a45s.webp" alt="Telefonos kép" width="700" height="467" loading="lazy" decoding="async">
+							<figcaption>Telefonos kép</figcaption>
+							<i class="slide__icon fas fa-times-circle text-red"></i>
+						</figure>
+						<i class="slide__arrow fas fa-arrow-down"></i>
+						<figure class="slide__image slide__image--after">
+							<img src="/assets/images/after-a45s.webp" alt="Eladásra optimalizált, profi fotó" width="700" height="467" loading="lazy" decoding="async">
+							<figcaption class="slide__caption slide__caption--after">Eladásra optimalizált, profi fotó</figcaption>
+							<i class="slide__icon fas fa-check-circle text-green"></i>
+						</figure>
+					</div>
+					<div class="slide" role="group" aria-roledescription="slide" aria-label="3 / 4">
+						<figure class="slide__image slide__image--before">
+							<img src="/assets/images/before-a6.webp" alt="Telefonos kép" width="700" height="467" loading="lazy" decoding="async">
+							<figcaption>Telefonos kép</figcaption>
+							<i class="slide__icon fas fa-times-circle text-red"></i>
+						</figure>
+						<i class="slide__arrow fas fa-arrow-down"></i>
+						<figure class="slide__image slide__image--after">
+							<img src="/assets/images/after-a6.webp" alt="Eladásra optimalizált, profi fotó" width="700" height="467" loading="lazy" decoding="async">
+							<figcaption class="slide__caption slide__caption--after">Eladásra optimalizált, profi fotó</figcaption>
+							<i class="slide__icon fas fa-check-circle text-green"></i>
+						</figure>
+					</div>
+					<div class="slide" role="group" aria-roledescription="slide" aria-label="4 / 4">
+						<figure class="slide__image slide__image--before">
+							<img src="/assets/images/before-ceed.webp" alt="Telefonos kép" width="700" height="467" loading="lazy" decoding="async">
+							<figcaption>Telefonos kép</figcaption>
+							<i class="slide__icon fas fa-times-circle text-red"></i>
+						</figure>
+						<i class="slide__arrow fas fa-arrow-down"></i>
+						<figure class="slide__image slide__image--after">
+							<img src="/assets/images/after-ceed.webp" alt="Eladásra optimalizált, profi fotó" width="700" height="467" loading="lazy" decoding="async">
+							<figcaption class="slide__caption slide__caption--after">Eladásra optimalizált, profi fotó</figcaption>
+							<i class="slide__icon fas fa-check-circle text-green"></i>
+						</figure>
+					</div>
 				</div>
-			</div>
+				<div class="slider-pagination">
+					<button class="slider-dot slider-dot--active" aria-label="1. kép" aria-current="true"></button>
+					<button class="slider-dot" aria-label="2. kép"></button>
+					<button class="slider-dot" aria-label="3. kép"></button>
+					<button class="slider-dot" aria-label="4. kép"></button>
+				</div>
+			</aside>
 		</div>
 	</header>
 
