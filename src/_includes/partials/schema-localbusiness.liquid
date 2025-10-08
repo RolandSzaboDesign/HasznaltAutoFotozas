@@ -1,0 +1,66 @@
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "LocalBusiness",
+	"name": "Használt Autó Fotózás",
+	"image": "https://hasznaltautofotozas.hu/assets/images/roland.webp",
+	"description": "Autófotózás Budapesten és Pest megyében – Szabó Roland fotós segít, hogy autód gyorsabban és magasabb áron találjon új gazdát.",
+	"url": "https://hasznaltautofotozas.hu/",
+	"telephone": "+36205914620",
+	"email": "mailto:hi@rolandszabo.photo",
+	"priceRange": "29900 HUF",
+	"address": {
+		"@type": "PostalAddress",
+		"addressLocality": "Budapest",
+		"addressRegion": "Pest megye",
+		"addressCountry": "HU"
+	},
+	"geo": {
+		"@type": "GeoCoordinates",
+		"latitude": "47.4979",
+		"longitude": "19.0402"
+	},
+	"openingHoursSpecification": [{
+		"@type": "OpeningHoursSpecification",
+		"dayOfWeek": [
+			"Monday",
+			"Tuesday",
+			"Wednesday",
+			"Thursday",
+			"Friday",
+			"Saturday",
+			"Sunday"
+		],
+		"opens": "00:00",
+		"closes": "23:59"
+	}],
+	"aggregateRating": {
+		"@type": "AggregateRating",
+		"ratingValue": "5.0",
+		"reviewCount": "{{ testimonials | size }}"
+	},
+	"review": [
+		{% for item in testimonials %}
+		{
+			"@type": "Review",
+			"author": {
+				"@type": "Person",
+				"name": {{ item.author | jsonify }}
+			},
+			"reviewBody": {{ item.text | jsonify }},
+			"reviewRating": {
+				"@type": "Rating",
+				"ratingValue": "5",
+				"bestRating": "5"
+			}
+		}{% if not forloop.last %},{% endif %}
+		{% endfor %}
+	],
+	"sameAs": [
+		"https://www.instagram.com/rolandszabophoto",
+		"https://www.facebook.com/szaboka89",
+		"https://www.linkedin.com/in/szaboka",
+		"https://maps.app.goo.gl/3itsmpJDEug53kox7"
+	]
+}
+</script>

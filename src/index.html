@@ -177,26 +177,22 @@ title: Használt Autó Fotózás Budapest
 		<div class="container">
 			<h2 class="section__title">Ügyfeleim mondták</h2>
 			<div class="quotes">
-				<article class="quote">
-					<img class="quote__image" src="/assets/images/quote-barni.webp" alt="Kia Ceed SW Használt Autó Fotózás" width="100" height="100" loading="lazy" fetchpriority="low">
-					<p class="quote__text">Az autó fotózás után napokon belül el is adtam a kocsit. Roland nélkül szerintem még most is hirdetném.</p>
-					<footer class="quote__footer"><cite class="quote__author">Barni</cite> &mdash; Kia Ceed SW</footer>
-				</article>
-				<article class="quote">
-					<img class="quote__image" src="/assets/images/quote-armin.webp" alt="Opel Corsa-e Használt Autó Fotózás" width="100" height="100" loading="lazy" fetchpriority="low">
-					<p class="quote__text">Rugalmas volt az időponttal, pontosan tudta, mitől lesz jó egy autós fotó. A képeket villámgyorsan megkaptam.</p>
-					<footer class="quote__footer"><cite class="quote__author">Ármin</cite> &mdash; Opel Corsa-e</footer>
-				</article>
-				<article class="quote">
-					<img class="quote__image" src="/assets/images/quote-gergo.webp" alt="Ford Transit Használt Autó Fotózás" width="100" height="100" loading="lazy" fetchpriority="low">
-					<p class="quote__text">Nagyon jó volt együtt dolgozni Rolanddal, és a képek magukért beszélnek. Ajánlom meleg szívvel!</p>
-					<footer class="quote__footer"><cite class="quote__author">Gergő</cite> &mdash; Ford Transit</footer>
-				</article>
-				<article class="quote">
-					<img class="quote__image" src="/assets/images/quote-ricsi.webp" alt="Ford Mondeo ST200 Használt Autó Fotózás" width="100" height="100" loading="lazy" fetchpriority="low">
-					<p class="quote__text">Jó hangulatú fotózás, gyors utómunka és tökéletes fotók! Csak ajánlani tudom!</p>
-					<footer class="quote__footer"><cite class="quote__author">Ricsi</cite> &mdash; Ford Mondeo ST200</footer>
-				</article>
+				{% for item in testimonials %}
+					<article class="quote">
+						<img
+							class="quote__image"
+							src="{{ item.image }}"
+							alt="{{ item.car }} Használt Autó Fotózás"
+							width="100"
+							height="100"
+							loading="lazy"
+							fetchpriority="low">
+						<p class="quote__text">{{ item.text }}</p>
+						<footer class="quote__footer">
+							<cite class="quote__author">{{ item.author }}</cite> &mdash; {{ item.car }}
+						</footer>
+					</article>
+				{% endfor %}
 			</div>
 			<div class="case-study">
 				<h3 class="case-study__title">Így keresett Anna 200.000 Ft-ot a használt autó fotózással</h3>
@@ -319,4 +315,4 @@ title: Használt Autó Fotózás Budapest
 {% include "_includes/partials/privacy-policy.html" %}
 {% include "_includes/partials/schema-faq.liquid" %}
 {% include "_includes/partials/schema-person.liquid" %}
-{% include "_includes/partials/schema-service.liquid" %}
+{% include "_includes/partials/schema-localbusiness.liquid" %}
