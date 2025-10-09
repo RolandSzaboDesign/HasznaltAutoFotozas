@@ -221,17 +221,8 @@ title: Használt Autó Fotózás Budapest
 			<p>Teljesen mindegy, hogy városi kisautód, SUV-d, családi kombid vagy épp az álomautód szeretnél eladni, profi fotókkal mindig könnyebb. A használt autó fotózással az a célom, hogy a hirdetésed kitűnjön, és a vevőd már a képeken beleszeressen a kocsidba. Íme néhány példa a munkáimból.</p>
 			<section class="gallery">
 				{% for image in gallery %}
-					<img
-						class="js-lightbox"
-						src="/assets/images/gallery/{{ image.file }}"
-						data-highres="/assets/images/gallery/{{ image.file }}"
-						alt="{{ image.alt }}"
-						title="{{ image.title }}"
-						width="1000"
-						height="667"
-						loading="lazy"
-						fetchpriority="low"
-					>
+					{% assign imagePath = "./src/assets/images/gallery/" | append: image.file %}
+					{% image imagePath, image.alt, "(max-width: 991px) 50vw, (max-width: 1199px) 33vw, 33vw" %}
 				{% endfor %}
 			</section>
 			<div class="button-and-link">
