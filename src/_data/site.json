@@ -1,0 +1,27 @@
+{
+	"title": "Használt Autó Fotózás",
+	"tagline": "Add el gyorsabban, több pénzért, kevesebb macerával.",
+	"description_short": "12 profi kép aznapi kézbesítéssel. Hirdetéshez optimalizált fotók, gyorsabb eladás, kevesebb alkudozás.",
+	"description_long": "Profi autófotózás Budapesten és Pest megyében. 12 fotó aznapi kézbesítéssel – eladásra optimalizált képek, gyorsabb értékesítés, kevesebb alkudozás.",
+	"description_person": "Szabó Roland budapesti fotós, aki abban hisz, hogy egy jó kép nemcsak szép, hanem értéket is teremt – legyen szó autókról, portrékról vagy személyes márkákról.",
+	"url": "https://hasznaltautofotozas.hu",
+	"lang": "hu",
+	"locale": "hu_HU",
+	"author": {
+		"name": "Szabó Roland",
+		"email": "hi@rolandszabo.photo",
+		"jobTitle": "Fotós",
+		"sameAs": [
+			"https://maps.app.goo.gl/3itsmpJDEug53kox7",
+			"https://www.linkedin.com/in/szaboka",
+			"https://www.instagram.com/rolandszabophoto",
+			"https://www.facebook.com/szaboka89"
+		]
+	},
+	"brand": {
+		"name": "Használt Autó Fotózás",
+		"price": "29900",
+		"currency": "HUF",
+		"areaServed": "Budapest és Pest megye"
+	}
+}

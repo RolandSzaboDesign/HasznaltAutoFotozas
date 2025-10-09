@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="{{ site.lang }}">
 	<head>
 		<meta charset="utf-8">
-		<title>Használt Autó Fotózás | Add el gyorsabban, több pénzért, kevesebb macerával.</title>
+		<title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<meta name="description" content="12 profi kép aznapi kézbesítéssel. Hirdetéshez optimalizált fotók, gyorsabb eladás, kevesebb alkudozás.">
-		<link rel="canonical" href="https://hasznaltautofotozas.hu/">
+		<meta name="description" content="{{ site.description_short }}">
+		<meta name="author" content="{{ site.author.name }}">
 		<meta name="robots" content="max-image-preview:large">
+		<link rel="canonical" href="{{ site.url }}/">
 
 		<!-- Styles -->
 		<link rel="preload" href="/assets/css/style.css" as="style" onload="this.rel='stylesheet'">
@@ -27,21 +28,21 @@
 
 		<!-- OpenGraph -->
 		<meta property="og:type" content="website">
-		<meta property="og:site_name" content="Használt Autó Fotózás">
-		<meta property="og:url" content="https://hasznaltautofotozas.hu/">
-		<meta property="og:locale" content="hu_HU">
-		<meta property="og:title" content="Használt Autó Fotózás | Add el gyorsabban, több pénzért, kevesebb macerával.">
-		<meta property="og:description" content="12 profi kép aznapi kézbesítéssel. Hirdetéshez optimalizált fotók, gyorsabb eladás, kevesebb alkudozás.">
+		<meta property="og:site_name" content="{{ site.title }}">
+		<meta property="og:url" content="{{ site.url }}/">
+		<meta property="og:locale" content="{{ site.locale }}">
+		<meta property="og:title" content="{{ site.title }} | {{ site.tagline }}">
+		<meta property="og:description" content="{{ site.description_long }}">
 		<meta property="og:image" content="https://hasznaltautofotozas.hu/assets/images/og_image.webp">
 
 		<!-- Twitter/X Card -->
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:site" content="@szabokaphoto">
 		<meta name="twitter:creator" content="@szabokaphoto">
-		<meta name="twitter:title" content="Használt Autó Fotózás | Add el gyorsabban, több pénzért, kevesebb macerával.">
-		<meta name="twitter:description" content="12 profi kép aznapi kézbesítéssel. Hirdetéshez optimalizált fotók, gyorsabb eladás, kevesebb alkudozás.">
+		<meta name="twitter:title" content="{{ site.title }} | {{ site.tagline }}">
+		<meta name="twitter:description" content="{{ site.description_long }}">
 		<meta name="twitter:image" content="https://hasznaltautofotozas.hu/assets/images/og_image.webp">
-		<meta name="twitter:image:alt" content="Használt Autó Fotózás | Add el gyorsabban, több pénzért, kevesebb macerával.">
+		<meta name="twitter:image:alt" content="{{ site.title }} | {{ site.tagline }}">
 
 		<!-- Ahrefs Analytics -->
 		<script src="https://analytics.ahrefs.com/analytics.js" data-key="3fFNg02C3K8g1RxCZId+tQ" async></script>

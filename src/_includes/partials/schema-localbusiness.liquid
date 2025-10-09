@@ -2,13 +2,13 @@
 {
 	"@context": "https://schema.org",
 	"@type": "LocalBusiness",
-	"name": "Használt Autó Fotózás",
-	"image": "https://hasznaltautofotozas.hu/assets/images/roland.webp",
-	"description": "Autófotózás Budapesten és Pest megyében – Szabó Roland fotós segít, hogy autód gyorsabban és magasabb áron találjon új gazdát.",
-	"url": "https://hasznaltautofotozas.hu/",
-	"telephone": "+36205914620",
-	"email": "mailto:hi@rolandszabo.photo",
-	"priceRange": "29900 HUF",
+	"name": "{{ site.brand.name }}",
+	"image": "{{ site.url }}/assets/images/roland.webp",
+	"description": "{{ site.description_short }}",
+	"url": "{{ site.url }}/",
+	"telephone": "{{ site.author.telephone }}",
+	"email": "mailto:{{ site.author.email }}",
+	"priceRange": "{{ site.brand.price }} {{ site.brand.currency }}",
 	"address": {
 		"@type": "PostalAddress",
 		"streetAddress": "Rózsakert utca 19/C",
@@ -25,13 +25,7 @@
 	"openingHoursSpecification": [{
 		"@type": "OpeningHoursSpecification",
 		"dayOfWeek": [
-			"Monday",
-			"Tuesday",
-			"Wednesday",
-			"Thursday",
-			"Friday",
-			"Saturday",
-			"Sunday"
+			"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
 		],
 		"opens": "00:00",
 		"closes": "23:59"
@@ -58,11 +52,6 @@
 		}{% if not forloop.last %},{% endif %}
 		{% endfor %}
 	],
-	"sameAs": [
-		"https://www.instagram.com/rolandszabophoto",
-		"https://www.facebook.com/szaboka89",
-		"https://www.linkedin.com/in/szaboka",
-		"https://maps.app.goo.gl/3itsmpJDEug53kox7"
-	]
+	"sameAs": {{ site.author.sameAs | jsonify }}
 }
 </script>
