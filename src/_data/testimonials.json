@@ -3,24 +3,24 @@
 		"author": "Barni",
 		"car": "Kia Ceed SW",
 		"text": "Az autó fotózás után napokon belül el is adtam a kocsit. Roland nélkül szerintem még most is hirdetném.",
-		"image": "/assets/images/quote-barni.webp"
+		"image": "/assets/images/quote/quote-barni.webp"
 	},
 	{
 		"author": "Ármin",
 		"car": "Opel Corsa-e",
 		"text": "Rugalmas volt az időponttal, pontosan tudta, mitől lesz jó egy autós fotó. A képeket villámgyorsan megkaptam.",
-		"image": "/assets/images/quote-armin.webp"
+		"image": "/assets/images/quote/quote-armin.webp"
 	},
 	{
 		"author": "Gergő",
 		"car": "Ford Transit",
 		"text": "Nagyon jó volt együtt dolgozni Rolanddal, és a képek magukért beszélnek. Ajánlom meleg szívvel!",
-		"image": "/assets/images/quote-gergo.webp"
+		"image": "/assets/images/quote/quote-gergo.webp"
 	},
 	{
 		"author": "Ricsi",
 		"car": "Ford Mondeo ST200",
 		"text": "Jó hangulatú fotózás, gyors utómunka és tökéletes fotók! Csak ajánlani tudom!",
-		"image": "/assets/images/quote-ricsi.webp"
+		"image": "/assets/images/quote/quote-ricsi.webp"
 	}
 ]
