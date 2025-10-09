@@ -3,7 +3,7 @@ const prevBtn = lightbox.querySelector('.lightbox__arrow--prev');
 const nextBtn = lightbox.querySelector('.lightbox__arrow--next');
 const closeBtn = lightbox.querySelector('.lightbox__close');
 const caption = lightbox.querySelector('.lightbox__caption');
-const overlay = lightbox.querySelector('.lightbox__overlay');
+const lightboxOverlay = lightbox.querySelector('.lightbox__overlay');
 
 const prevImg = lightbox.querySelector('.lightbox__image--prev');
 const currentImg = lightbox.querySelector('.lightbox__image--current');
@@ -30,13 +30,14 @@ function updateLightboxImages(index) {
 
 function showLightbox(index) {
 	updateLightboxImages(index);
+	lockBodyScroll();
 	lightbox.classList.add('lightbox--active');
-	document.body.classList.add('lightbox-open');
 }
 
 function hideLightbox() {
 	lightbox.classList.remove('lightbox--active');
-	document.body.classList.remove('lightbox-open');
+	currentImg.classList.remove('lightbox__image--visible');
+	unlockBodyScroll();
 }
 
 function showNext() {
@@ -61,13 +62,12 @@ prevBtn.addEventListener('click', showPrev);
 nextBtn.addEventListener('click', showNext);
 
 window.addEventListener('keydown', (e) => {
-	if (lightbox.hasAttribute('hidden')) return;
+	if (!lightbox.classList.contains('lightbox--active')) return;
 	if (e.key === 'ArrowLeft') showPrev();
 	if (e.key === 'ArrowRight') showNext();
 	if (e.key === 'Escape') hideLightbox();
 });
 
-// Touch support
 let touchStartX = 0;
 let touchEndX = 0;
 const swipeThreshold = 50;
@@ -84,4 +84,4 @@ lightbox.addEventListener('touchend', (e) => {
 	}
 });
 
-overlay.addEventListener('click', hideLightbox);
+lightboxOverlay.addEventListener('click', hideLightbox);
