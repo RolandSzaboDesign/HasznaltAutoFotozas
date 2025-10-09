@@ -69,6 +69,58 @@ html { box-sizing: border-box; }
 	src: url('../webfonts/lora-v37-latin-ext-regular.woff2') format('woff2');
 }
 
+@font-face {
+	font-family: 'Font Awesome 7 Solid';
+	font-display: swap;
+	font-style: normal;
+	font-weight: 900;
+	src: url('/assets/webfonts/fa7-solid.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Font Awesome 7 Brands';
+	font-display: swap;
+	font-style: normal;
+	font-weight: 400;
+	src: url('/assets/webfonts/fa7-brands.woff2') format('woff2');
+}
+
+
+
+/* FontAwesome Icon Subset */
+
+.fas {
+	font-family: 'Font Awesome 7 Solid';
+	font-weight: 900;
+	line-height: 1;
+}
+
+.fab {
+	font-family: 'Font Awesome 7 Brands';
+	font-weight: 400;
+	line-height: 1;
+}
+
+.fa-arrow-down:before { content: "\f063"; }
+.fa-broom:before { content: "\f51a"; }
+.fa-car-on:before { content: "\e4dd"; }
+.fa-caret-left:before { content: "\f0d9"; }
+.fa-caret-right:before { content: "\f0da"; }
+.fa-check-circle:before { content: "\f058"; }
+.fa-clock:before { content: "\f017"; }
+.fa-couch:before { content: "\f4b8"; }
+.fa-crosshairs:before { content: "\f05b"; }
+.fa-envelope:before { content: "\f0e0"; }
+.fa-hand-sparkles:before { content: "\e05d"; }
+.fa-info-circle:before { content: "\f05a"; }
+.fa-instagram:before { content: "\f16d"; }
+.fa-money-bill-trend-up:before { content: "\e529"; }
+.fa-phone:before { content: "\f095"; }
+.fa-soap:before { content: "\e06e"; }
+.fa-times-circle:before { content: "\f057"; }
+.fa-toilet-paper:before { content: "\f71e"; }
+.fa-xmark:before { content: "\f00d"; }
+
 
 
 /* Base */
@@ -616,7 +668,7 @@ figcaption {
 
 .slide__icon {
 	position: absolute;
-	right: -1.5rem;
+	right: -1rem;
 	bottom: -1rem;
 	font-size: 5rem;
 	transform: rotate(10deg);
@@ -1239,18 +1291,33 @@ body.scroll-lock {
 	font-size: 4rem;
 	cursor: pointer;
 	z-index: 4;
+	transition: color .25s;
 }
 
-.lightbox__arrow--prev {
-	left: 1rem;
-	top: 50%;
-	transform: translateY(-50%);
+.lightbox__arrow:hover,
+.lightbox__arrow:focus {
+	color: var(--yellow)
 }
 
+.lightbox__close:hover,
+.lightbox__close:focus {
+	color: var(--red);
+}
+
+.lightbox__arrow--prev,
 .lightbox__arrow--next {
-	right: 1rem;
 	top: 50%;
 	transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 479.98px) {
+	.lightbox__arrow--prev { left: .5rem; }
+	.lightbox__arrow--next { right: .5rem; }
+}
+
+@media only screen and (min-width: 480px) {
+	.lightbox__arrow--prev { left: 1rem; }
+	.lightbox__arrow--next { right: 1rem; }
 }
 
 .lightbox__close {
