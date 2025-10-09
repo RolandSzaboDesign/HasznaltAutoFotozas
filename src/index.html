@@ -41,64 +41,43 @@ title: Használt Autó Fotózás Budapest
 			</article>
 			<aside>
 				<div id="slider" class="slider" role="region" aria-roledescription="carousel" aria-label="Használt Autó Fotózás slider">
-					<div class="slide" role="group" aria-roledescription="slide" aria-label="1 / 4">
-						<figure class="slide__image slide__image--before">
-							<img src="/assets/images/before/before-giulia.webp" alt="Telefonos kép" width="700" height="467" loading="eager" fetchpriority="high" decoding="async">
-							<figcaption>Telefonos kép</figcaption>
-							<i class="slide__icon fas fa-times-circle text-red"></i>
-						</figure>
-						<i class="slide__arrow fas fa-arrow-down"></i>
-						<figure class="slide__image slide__image--after">
-							<img src="/assets/images/after/after-giulia.webp" alt="Eladásra optimalizált, profi fotó" width="700" height="467" loading="eager" fetchpriority="high" decoding="async">
-							<figcaption class="slide__caption slide__caption--after">Eladásra optimalizált, profi fotó</figcaption>
-							<i class="slide__icon fas fa-check-circle text-green"></i>
-						</figure>
-					</div>
-					<div class="slide" role="group" aria-roledescription="slide" aria-label="2 / 4">
-						<figure class="slide__image slide__image--before">
-							<img src="/assets/images/before/before-a45s.webp" alt="Telefonos kép" width="700" height="467" loading="lazy" decoding="async">
-							<figcaption>Telefonos kép</figcaption>
-							<i class="slide__icon fas fa-times-circle text-red"></i>
-						</figure>
-						<i class="slide__arrow fas fa-arrow-down"></i>
-						<figure class="slide__image slide__image--after">
-							<img src="/assets/images/after/after-a45s.webp" alt="Eladásra optimalizált, profi fotó" width="700" height="467" loading="lazy" decoding="async">
-							<figcaption class="slide__caption slide__caption--after">Eladásra optimalizált, profi fotó</figcaption>
-							<i class="slide__icon fas fa-check-circle text-green"></i>
-						</figure>
-					</div>
-					<div class="slide" role="group" aria-roledescription="slide" aria-label="3 / 4">
-						<figure class="slide__image slide__image--before">
-							<img src="/assets/images/before/before-a6.webp" alt="Telefonos kép" width="700" height="467" loading="lazy" decoding="async">
-							<figcaption>Telefonos kép</figcaption>
-							<i class="slide__icon fas fa-times-circle text-red"></i>
-						</figure>
-						<i class="slide__arrow fas fa-arrow-down"></i>
-						<figure class="slide__image slide__image--after">
-							<img src="/assets/images/after/after-a6.webp" alt="Eladásra optimalizált, profi fotó" width="700" height="467" loading="lazy" decoding="async">
-							<figcaption class="slide__caption slide__caption--after">Eladásra optimalizált, profi fotó</figcaption>
-							<i class="slide__icon fas fa-check-circle text-green"></i>
-						</figure>
-					</div>
-					<div class="slide" role="group" aria-roledescription="slide" aria-label="4 / 4">
-						<figure class="slide__image slide__image--before">
-							<img src="/assets/images/before/before-ceed.webp" alt="Telefonos kép" width="700" height="467" loading="lazy" decoding="async">
-							<figcaption>Telefonos kép</figcaption>
-							<i class="slide__icon fas fa-times-circle text-red"></i>
-						</figure>
-						<i class="slide__arrow fas fa-arrow-down"></i>
-						<figure class="slide__image slide__image--after">
-							<img src="/assets/images/after/after-ceed.webp" alt="Eladásra optimalizált, profi fotó" width="700" height="467" loading="lazy" decoding="async">
-							<figcaption class="slide__caption slide__caption--after">Eladásra optimalizált, profi fotó</figcaption>
-							<i class="slide__icon fas fa-check-circle text-green"></i>
-						</figure>
-					</div>
+					{% for slide in slider %}
+						<div class="slide" role="group" aria-roledescription="slide" aria-label="{{ slide.id }} / {{ slider | size }}">
+							<figure class="slide__image slide__image--before">
+								<img
+									src="{{ slide.before }}"
+									alt="{{ slide.beforeAlt }}"
+									width="700"
+									height="467"
+									loading="{{ slide.loading }}"
+									fetchpriority="{{ slide.fetchpriority }}"
+									decoding="async">
+								<figcaption>{{ slide.beforeAlt }}</figcaption>
+								<i class="slide__icon fas fa-times-circle text-red"></i>
+							</figure>
+
+							<i class="slide__arrow fas fa-arrow-down"></i>
+
+							<figure class="slide__image slide__image--after">
+								<img
+									src="{{ slide.after }}"
+									alt="{{ slide.afterAlt }}"
+									width="700"
+									height="467"
+									loading="{{ slide.loading }}"
+									fetchpriority="{{ slide.fetchpriority }}"
+									decoding="async">
+								<figcaption class="slide__caption slide__caption--after">{{ slide.afterAlt }}</figcaption>
+								<i class="slide__icon fas fa-check-circle text-green"></i>
+							</figure>
+						</div>
+					{% endfor %}
 				</div>
+
 				<div class="slider-pagination">
-					<button class="slider-dot slider-dot--active" aria-label="1. kép" aria-current="true"></button>
-					<button class="slider-dot" aria-label="2. kép"></button>
-					<button class="slider-dot" aria-label="3. kép"></button>
-					<button class="slider-dot" aria-label="4. kép"></button>
+					{% for slide in slider %}
+						<button class="slider-dot{% if forloop.first %} slider-dot--active{% endif %}" aria-label="{{ slide.id }}. kép"{% if forloop.first %} aria-current="true"{% endif %}></button>
+					{% endfor %}
 				</div>
 			</aside>
 		</div>
@@ -165,7 +144,7 @@ title: Használt Autó Fotózás Budapest
 					<p class="plan__price plan__price--new h1"><ins>29.990 Ft</ins></p>
 					<p class="plan__disclaimer"><strong class="text-light">Neked csak annyit kell tenned, hogy tisztán hozod az autót.</strong> A többit én intézem, egy óra alatt végzünk is bőven.</p>
 				</div>
-				<img class="plan__photo" src="/assets/images/plan-photo.webp" alt="Használt Autó Fotózás" width="1000" height="667" loading="lazy" fetchpriority="low">
+				<img class="plan__photo" src="/assets/images/plan-photo.webp" alt="Használt Autó Fotózás" width="1000" height="667" loading="lazy" fetchpriority="low" decoding="async">
 			</article>
 			<p class="for-dealers"><strong>Autókereskedőknek is!</strong><br> Profi fotókkal gyorsabban forog a készlet, erősebb a bizalom, és több autó fotózására mennyiségi kedvezményt adok.</p>
 			<div class="button-and-link">
@@ -188,6 +167,7 @@ title: Használt Autó Fotózás Budapest
 							width="100"
 							height="100"
 							loading="lazy"
+							decoding="async"
 							fetchpriority="low">
 						<p class="quote__text">{{ item.text }}</p>
 						<footer class="quote__footer">
@@ -205,7 +185,7 @@ title: Használt Autó Fotózás Budapest
 					<p>A profi fotó nem csak az autót mutatta meg jobb fényben, hanem Annának is önbizalmat adott. Ez lett a különbség a <em>„jó lenne 900-ért eladni”</em> és az <em>„elkelt 1 millió 1-ért”</em> között.</p>
 				</article>
 				<figure>
-					<img class="case-study__image" src="/assets/images/case-study-proof.webp" alt="Anna 200.000 Forinttal többért adta el a Swifjét, mint ahogy eredetileg tervezte." title="Anna 200.000 Forinttal többért adta el a Swifjét, mint ahogy eredetileg tervezte." width="580" height="550" loading="lazy" fetchpriority="low">
+					<img class="case-study__image" src="/assets/images/case-study-proof.webp" alt="Anna 200.000 Forinttal többért adta el a Swifjét, mint ahogy eredetileg tervezte." title="Anna 200.000 Forinttal többért adta el a Swifjét, mint ahogy eredetileg tervezte." width="580" height="550" loading="lazy" decoding="async" fetchpriority="low">
 					<figcaption>Annával a beszélgetésünk Instagramon</figcaption>
 				</figure>
 			</div>
@@ -299,7 +279,7 @@ title: Használt Autó Fotózás Budapest
 
 <footer class="footer">
 	<div class="container">
-		<p class="copyright">&copy; 2025 Szabó Roland | Használt Autó Fotózás</p>
+		<p class="copyright">&copy; 2025 {{ site.author.name }} | {{ site.title }}</p>
 		<a class="footer__link js-prevent-default" href="#adatkezeles" role="button" onclick="openModal()" aria-haspopup="dialog" aria-controls="privacy-modal">Adatkezelés</a>
 	</div>
 </footer>
@@ -308,4 +288,5 @@ title: Használt Autó Fotózás Budapest
 {% include "_includes/partials/privacy-policy.html" %}
 {% include "_includes/partials/schema-faq.liquid" %}
 {% include "_includes/partials/schema-person.liquid" %}
+{% include "_includes/partials/schema-slider.liquid" %}
 {% include "_includes/partials/schema-localbusiness.liquid" %}

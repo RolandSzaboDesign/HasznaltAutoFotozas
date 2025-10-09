@@ -1,0 +1,22 @@
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "ItemList",
+	"itemListElement": [
+		{% for slide in slider %}
+		{
+			"@type": "ListItem",
+			"position": {{ slide.id }},
+			"item": {
+				"@type": "ImageObject",
+				"name": "{{ slide.car }} – Before/After fotó",
+				"caption": "Profi autófotózás: {{ slide.car }} – előtte és utána",
+				"contentUrl": "{{ slide.after }}",
+				"thumbnail": "{{ slide.before }}",
+				"representativeOfPage": true
+			}
+		}{% if not forloop.last %},{% endif %}
+		{% endfor %}
+	]
+}
+</script>

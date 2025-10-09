@@ -1,0 +1,46 @@
+[
+	{
+		"id": 1,
+		"slug": "giulia",
+		"car": "Alfa Romeo Giulia Q4 Veloce",
+		"before": "/assets/images/before/before-giulia.webp",
+		"after": "/assets/images/after/after-giulia.webp",
+		"beforeAlt": "Telefonos kép",
+		"afterAlt": "Eladásra optimalizált, profi fotó",
+		"loading": "eager",
+		"fetchpriority": "high"
+	},
+	{
+		"id": 2,
+		"slug": "a45s",
+		"car": "Mercedes-AMG A45 S",
+		"before": "/assets/images/before/before-a45s.webp",
+		"after": "/assets/images/after/after-a45s.webp",
+		"beforeAlt": "Telefonos kép",
+		"afterAlt": "Eladásra optimalizált, profi fotó",
+		"loading": "lazy",
+		"fetchpriority": "low"
+	},
+	{
+		"id": 3,
+		"slug": "a6",
+		"car": "Audi A6 Avant",
+		"before": "/assets/images/before/before-a6.webp",
+		"after": "/assets/images/after/after-a6.webp",
+		"beforeAlt": "Telefonos kép",
+		"afterAlt": "Eladásra optimalizált, profi fotó",
+		"loading": "lazy",
+		"fetchpriority": "low"
+	},
+	{
+		"id": 4,
+		"slug": "ceed",
+		"car": "Kia Ceed SW",
+		"before": "/assets/images/before/before-ceed.webp",
+		"after": "/assets/images/after/after-ceed.webp",
+		"beforeAlt": "Telefonos kép",
+		"afterAlt": "Eladásra optimalizált, profi fotó",
+		"loading": "lazy",
+		"fetchpriority": "low"
+	}
+]
