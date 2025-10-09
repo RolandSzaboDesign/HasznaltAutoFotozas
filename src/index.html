@@ -262,18 +262,23 @@ title: Használt Autó Fotózás Budapest
 			<div class="contact-grid">
 				<div>
 					<h3>Töltsd ki az űrlapot, és visszahívlak:</h3>
-					<form class="form" name="kapcsolat" method="POST" action="/koszonom" netlify >
+					<form class="form" name="kapcsolat" method="POST" action="/koszonom" netlify netlify-honeypot="bot-field">
+						<input type="hidden" name="form-name" value="kapcsolat">
 						<div class="form__group">
 							<label class="form__label" for="nev">Keresztnév <span class="text-red">*</span></label>
-							<input class="form__input" type="text" id="nev" name="nev" required>
+							<input class="form__input" type="text" id="nev" name="nev" autocomplete="given-name" required>
 						</div>
 						<div class="form__group">
 							<label class="form__label" for="telefon">Telefonszám <span class="text-red">*</span></label>
-							<input class="form__input" type="tel" id="telefon" name="telefon" required>
+							<input class="form__input" type="tel" id="telefon" name="telefon" autocomplete="tel" required>
 						</div>
 						<div class="form__group">
 							<label class="form__label" for="jarmu">Jármű típusa <span class="text-red">*</span></label>
-							<input class="form__input" type="text" id="jarmu" name="jarmu" required>
+							<input class="form__input" type="text" id="jarmu" name="jarmu" autocomplete="off" required>
+						</div>
+						<div class="form__group hidden">
+							<label class="form__label" for="bot-field">Ne töltsd ki, ha ember vagy!</label>
+							<input class="form__input" type="text" id="bot-field" name="bot-field">
 						</div>
 						<p class="form__disclaimer"><small><i class="fas fa-info-circle text-yellow"></i>&nbsp; Az adataidat kizárólag a kapcsolatfelvételhez használom, harmadik félnek nem adom tovább.</small></p>
 						<button class="form__button btn" type="submit">Visszahívást kérek</button>
