@@ -74,7 +74,7 @@ const swipeThreshold = 50;
 
 lightbox.addEventListener('touchstart', (e) => {
 	touchStartX = e.changedTouches[0].screenX;
-});
+}, { passive: true });
 
 lightbox.addEventListener('touchend', (e) => {
 	touchEndX = e.changedTouches[0].screenX;
@@ -82,6 +82,6 @@ lightbox.addEventListener('touchend', (e) => {
 	if (Math.abs(diff) > swipeThreshold) {
 		diff < 0 ? showNext() : showPrev();
 	}
-});
+}, { passive: true });
 
 lightboxOverlay.addEventListener('click', hideLightbox);
