@@ -8,6 +8,7 @@ title: Használt Autó Fotózás Budapest
 <script src="/assets/js/slider.js" defer></script>
 <script src="/assets/js/typing.js" defer></script>
 <script src="/assets/js/lightbox.js" defer></script>
+<script src="/assets/js/meta-pixel.js" defer></script>
 <script src="/assets/js/scroll-lock.js" defer></script>
 
 <main>
@@ -254,21 +255,21 @@ title: Használt Autó Fotózás Budapest
 							<input class="form__input" type="text" id="bot-field" name="bot-field">
 						</div>
 						<p class="form__disclaimer"><small><i class="fas fa-info-circle text-yellow"></i>&nbsp; Az adataidat kizárólag a kapcsolatfelvételhez használom, harmadik félnek nem adom tovább.</small></p>
-						<button class="form__button btn" type="submit">Visszahívást kérek</button>
+						<button class="form__button btn" type="submit" onclick="if(window.fbq){fbq('track','Lead',{form:'visszahivas'});}">Visszahívást kérek</button>
 					</form>
 				</div>
 				<div>
 					<h3>Vagy keress közvetlenül:</h3>
 					<div class="contact-card">
-						<a class="btn btn--secondary" href="tel:+36205914620"><i class="fas fa-phone"></i>&nbsp; Hívj telefonon</a>
+						<a class="btn btn--secondary" href="tel:+36205914620" onclick="if(window.fbq){fbq('track','Contact',{method:'phone'});}"><i class="fas fa-phone"></i>&nbsp; Hívj telefonon</a>
 						<p class="contact-card__text">Ha nem veszem fel, visszahívlak, amint tudlak.</p>
 					</div>
 					<div class="contact-card">
-						<a class="btn btn--secondary" href="https://instagram.com/rolandszabo.photo" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i>&nbsp; DM Instagramon</a>
+						<a class="btn btn--secondary" href="https://instagram.com/rolandszabo.photo" target="_blank" rel="noopener noreferrer" onclick="if(window.fbq){fbq('track','Contact',{method:'instagram'});}"><i class="fab fa-instagram"></i>&nbsp; DM Instagramon</a>
 						<p class="contact-card__text">Instagramon azonnal kapok értesítést, így hamar válaszolok.</p>
 					</div>
 					<div class="contact-card">
-						<a class="btn btn--secondary" href="mailto:hi@rolandszabo.photo" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i>&nbsp; Írj emailt</a>
+						<a class="btn btn--secondary" href="mailto:hi@rolandszabo.photo" target="_blank" rel="noopener noreferrer" onclick="if(window.fbq){fbq('track','Contact',{method:'email'});}"><i class="fas fa-envelope"></i>&nbsp; Írj emailt</a>
 						<p class="contact-card__text">Az emailekre jellemzően pár órán belül válaszolok.</p>
 					</div>
 				</div>
@@ -285,6 +286,7 @@ title: Használt Autó Fotózás Budapest
 </footer>
 
 {% include "_includes/partials/lightbox.html" %}
+{% include "_includes/partials/cookie-consent.html" %}
 {% include "_includes/partials/privacy-policy.html" %}
 {% include "_includes/partials/schema-faq.liquid" %}
 {% include "_includes/partials/schema-person.liquid" %}
