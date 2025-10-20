@@ -159,12 +159,15 @@ title: Használt Autó Fotózás Budapest
 						<img
 							class="quote__image"
 							src="{{ item.image }}"
+							srcset="{{ item.image_sm }} 80w, {{ item.image }} 120w"
+							sizes="(max-width: 768px) 80px, 120px"
 							alt="{{ item.car }} Használt Autó Fotózás"
-							width="100"
-							height="100"
+							width="120"
+							height="120"
 							loading="lazy"
 							decoding="async"
-							fetchpriority="low">
+							fetchpriority="low"
+						>
 						<p class="quote__text">{{ item.text }}</p>
 						<footer class="quote__footer">
 							<cite class="quote__author">{{ item.author }}</cite> &mdash; {{ item.car }}
