@@ -473,7 +473,7 @@ figcaption {
 	--webkit-appearance: none;
 	cursor: pointer;
 	font: inherit;
-	font-weight: 700;
+	font-weight: 600;
 	color: var(--text);
 	border: 0;
 	background-color: transparent;
@@ -636,7 +636,7 @@ figcaption {
 	align-items: center;
 	justify-content: center;
 	margin-right: .75rem;
-	font-weight: 700;
+	font-weight: 600;
 	color: var(--yellow);
 	line-height: 1;
 }
@@ -776,7 +776,7 @@ figcaption {
 	align-self: end;
 	margin: 0;
 	font-family: var(--sans);
-	font-weight: 700;
+	font-weight: 600;
 }
 
 .about__text {
@@ -846,7 +846,7 @@ figcaption {
 
 .card__title {
 	font-family: var(--sans);
-	font-weight: 700;
+	font-weight: 600;
 	margin-top: 0;
 	margin-bottom: .5rem;
 }
@@ -934,7 +934,7 @@ figcaption {
 	margin-top: 0;
 	margin-bottom: 3rem;
 	font-family: var(--sans);
-	font-weight: 700;
+	font-weight: 600;
 }
 
 .plan__price {
