@@ -1,10 +1,10 @@
 [
 	{
 		"id": 1,
-		"slug": "giulia",
-		"car": "Alfa Romeo Giulia Q4 Veloce",
-		"before": "/assets/images/before/before-giulia.webp",
-		"after": "/assets/images/after/after-giulia.webp",
+		"slug": "mondeo",
+		"car": "Ford Mondeo Titanium-S",
+		"before": "/assets/images/before/before-mondeo.webp",
+		"after": "/assets/images/after/after-mondeo.webp",
 		"beforeAlt": "Telefonos kép",
 		"afterAlt": "Eladásra optimalizált, profi fotó",
 		"loading": "eager",
@@ -12,6 +12,28 @@
 	},
 	{
 		"id": 2,
+		"slug": "cmax",
+		"car": "Ford C-Max",
+		"before": "/assets/images/before/before-cmax.webp",
+		"after": "/assets/images/after/after-cmax.webp",
+		"beforeAlt": "Telefonos kép",
+		"afterAlt": "Eladásra optimalizált, profi fotó",
+		"loading": "lazy",
+		"fetchpriority": "low"
+	},
+	{
+		"id": 3,
+		"slug": "giulia",
+		"car": "Alfa Romeo Giulia Q4 Veloce",
+		"before": "/assets/images/before/before-giulia.webp",
+		"after": "/assets/images/after/after-giulia.webp",
+		"beforeAlt": "Telefonos kép",
+		"afterAlt": "Eladásra optimalizált, profi fotó",
+		"loading": "lazy",
+		"fetchpriority": "low"
+	},
+	{
+		"id": 4,
 		"slug": "a45s",
 		"car": "Mercedes-AMG A45 S",
 		"before": "/assets/images/before/before-a45s.webp",
@@ -22,7 +44,7 @@
 		"fetchpriority": "low"
 	},
 	{
-		"id": 3,
+		"id": 5,
 		"slug": "a6",
 		"car": "Audi A6 Avant",
 		"before": "/assets/images/before/before-a6.webp",
@@ -33,7 +55,7 @@
 		"fetchpriority": "low"
 	},
 	{
-		"id": 4,
+		"id": 6,
 		"slug": "ceed",
 		"car": "Kia Ceed SW",
 		"before": "/assets/images/before/before-ceed.webp",
