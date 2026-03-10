@@ -434,6 +434,11 @@ figcaption {
 
 /* Buttons */
 
+.btn-container {
+	margin-top: 5rem;
+	text-align: center;
+}
+
 .btn {
 	cursor: pointer;
 	position: relative;
@@ -584,40 +589,17 @@ figcaption {
 	color: var(--yellow);
 }
 
-.hero__highlight--blink:after {
-	content: "";
-	position: relative;
-	top: 1rem;
-	display: inline-block;
-	width: 2px;
-	height: 1em;
-	background-color: var(--text-dark);
-	animation: blink .5s infinite;
-}
-
-@keyframes blink {
-	0%, 50% { opacity: 1; }
-	51%, 100% { opacity: 0; }
+.hero__button {
+	margin-top: 3rem;
 }
 
 .checklist {
+	margin: 3rem 0;
 	counter-reset: list;
 }
 
-@media only screen and (max-width: 767.98px) {
-	.checklist {
-		margin-bottom: 3rem;
-	}
-}
-
-@media only screen and (min-width: 768px) {
-	.checklist {
-		margin-bottom: 6rem;
-	}
-}
-
 .checklist__item {
-	margin-bottom: 2rem;
+	margin-bottom: 1.5rem;
 }
 
 @media only screen and (max-width: 767.98px) {
@@ -848,7 +830,7 @@ figcaption {
 	font-family: var(--sans);
 	font-weight: 600;
 	margin-top: 0;
-	margin-bottom: .5rem;
+	margin-bottom: 1.25rem;
 }
 
 .card__text {
@@ -871,7 +853,7 @@ figcaption {
 @media only screen and (min-width: 768px) {
 	.card__icon {
 		margin-top: .65rem;
-		margin-right: 2rem;
+		margin-right: 2.5rem;
 		font-size: 3rem;
 	}
 }

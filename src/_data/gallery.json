@@ -1,8 +1,43 @@
 [
 	{
+		"file": "bmw-e92-coupe-zold-gyepen.webp",
+		"alt": "BMW E92 Coupé - használt autót fotóztunk a tavasz színeiben",
+		"title": "BMW E92 Coupé - használt autót fotóztunk a tavasz színeiben"
+	},
+	{
+		"file": "vw-bogar-studioban.webp",
+		"alt": "VW Bogár - stúdióban is fotózhatunk autót az igazán különleges eredményért",
+		"title": "VW Bogár - stúdióban is fotózhatunk autót az igazán különleges eredményért"
+	},
+	{
+		"file": "bmw-m2-zandvoort-blue-ipari-hatter.webp",
+		"alt": "BMW M2 - Zandvoort Kék sportautóról készítettünk csodaszép képeket ipari környezetben",
+		"title": "BMW M2 - Zandvoort Kék sportautóról készítettünk csodaszép képeket ipari környezetben"
+	},
+	{
+		"file": "ford-mondeo-titanium-s-hasznalt-auto-kereskedonek.webp",
+		"alt": "Ford Mondeo Titanium S – sportos családi kocsi autókereskedőnek fotózva",
+		"title": "Ford Mondeo Titanium S – sportos családi kocsi autókereskedőnek fotózva"
+	},
+	{
+		"file": "audi-rs7-power-division-tuning-auto-fotozas.webp",
+		"alt": "Audi RS7 Power Division Stage 4 1000 LE - nem mindennapi autó fotózás beltérben",
+		"title": "Audi RS7 Power Division Stage 4 1000 LE - nem mindennapi autó fotózás beltérben"
+	},
+	{
+		"file": "ford-c-max-autokereskedesnek-fotozva.webp",
+		"alt": "Ford C-Max - használt autó fotózás a zöld füvön autókereskedésnek",
+		"title": "Ford C-Max - használt autó fotózás a zöld füvön autókereskedésnek"
+	},
+	{
 		"file": "ford-focus-st-sportauto-fotozas-varosban.webp",
 		"alt": "Ford Focus ST – sportos használt autó fotózás városi háttérrel",
 		"title": "Ford Focus ST – sportos használt autó fotózás városi háttérrel"
+	},
+	{
+		"file": "porsche-944-s2-sportauto-fotozas-hegyekben.webp",
+		"alt": "Porsche 944 S2 – sportautó fotózás festői dombvidéken",
+		"title": "Porsche 944 S2 – sportautó fotózás festői dombvidéken"
 	},
 	{
 		"file": "alfa-romeo-giulia-q4-veloce-autofotozas-parkban.webp",
@@ -25,11 +60,6 @@
 		"title": "BMW M850i Gran Coupe – prémium autófotózás elegáns helyszínen"
 	},
 	{
-		"file": "porsche-944-s2-sportauto-fotozas-hegyekben.webp",
-		"alt": "Porsche 944 S2 – sportautó fotózás festői dombvidéken",
-		"title": "Porsche 944 S2 – sportautó fotózás festői dombvidéken"
-	},
-	{
 		"file": "ford-mondeo-st200-classic-autofotozas.webp",
 		"alt": "Ford Mondeo ST200 – ritka sportmodell fotózása, eladásra készítve",
 		"title": "Ford Mondeo ST200 – ritka sportmodell fotózása, eladásra készítve"
@@ -50,9 +80,9 @@
 		"title": "BMW 5-ös sorozat – profi használt autó fotózás a Duna partján"
 	},
 	{
-		"file": "porsche-911-c4s-autofotozas-naplemente.webp",
-		"alt": "Porsche 911 Carrera 4S – profi autófotózás naplementében",
-		"title": "Porsche 911 Carrera 4S – profi autófotózás naplementében"
+		"file": "mazda-3-hasznalt-auto-kereskedes-fotozas.webp",
+		"alt": "Mazda 3 - fotózás használt autó kereskedés számára",
+		"title": "Mazda 3 - fotózás használt autó kereskedés számára"
 	},
 	{
 		"file": "renault-megane-sport-autofotozas-varosban.webp",
@@ -60,14 +90,19 @@
 		"title": "Renault Megane RS – sportos használt autó fotózás Budapesten"
 	},
 	{
-		"file": "range-rover-suv-fotozas-erdoben.webp",
-		"alt": "Range Rover SUV – terepjáró fotózás erdei környezetben",
-		"title": "Range Rover SUV – terepjáró fotózás erdei környezetben"
-	},
-	{
 		"file": "chevrolet-corvette-c3-classic-autofotozas.webp",
 		"alt": "Chevrolet Corvette C3 – klasszikus sportautó fotózás",
 		"title": "Chevrolet Corvette C3 – klasszikus sportautó fotózás"
+	},
+	{
+		"file": "porsche-911-c4s-autofotozas-naplemente.webp",
+		"alt": "Porsche 911 Carrera 4S – profi autófotózás naplementében",
+		"title": "Porsche 911 Carrera 4S – profi autófotózás naplementében"
+	},
+	{
+		"file": "range-rover-suv-fotozas-erdoben.webp",
+		"alt": "Range Rover SUV – terepjáró fotózás erdei környezetben",
+		"title": "Range Rover SUV – terepjáró fotózás erdei környezetben"
 	},
 	{
 		"file": "suzuki-swift-hasznalt-auto-fotozas.webp",
@@ -78,11 +113,6 @@
 		"file": "kia-ceed-sw-hasznalt-auto-fotozas-zold-rendszam.webp",
 		"alt": "Kia Ceed SW – használt autó fotózás zöld rendszámos modellről",
 		"title": "Kia Ceed SW – használt autó fotózás zöld rendszámos modellről"
-	},
-	{
-		"file": "mazda-3-hasznalt-auto-kereskedes-fotozas.webp",
-		"alt": "Mazda 3 - fotózás használt autó kereskedés számára",
-		"title": "Mazda 3 - fotózás használt autó kereskedés számára"
 	},
 	{
 		"file": "opel-corsa-e-autofotozas-napfenyben.webp",
