@@ -3,222 +3,199 @@ layout: base.html
 title: Használt Autó Fotózás Budapest
 ---
 
-<link rel="preload" href="/assets/images/before/before-mondeo.webp" as="image" type="image/webp">
-<link rel="preload" href="/assets/images/after/after-mondeo.webp" as="image" type="image/webp">
-
-<main>
+<main class="main">
 	<header class="section hero">
-		<div class="hero__grid container">
-			<article class="hero__text">
-				<h1 class="hero__h1">Használt Autó Fotózás Budapesten</h1>
-				<p class="hero__title h1">
-					<span class="hero__title-text">Nem jönnek az érdeklődők?</span>
-					<span class="hero__highlight">A profi fotók segítenek, hogy végre észrevegyék az autódat.</span>
-				</p>
-				<ol class="checklist">
-					<li class="checklist__item">
-						<span class="checklist__subtitle">Időpontot egyeztetünk rugalmasan, akár másnapra</span>
-					</li>
-					<li class="checklist__item">
-						<span class="checklist__subtitle">Befotózom az autódat 30–60 perc alatt</span>
-					</li>
-					<li class="checklist__item">
-						<span class="checklist__subtitle">A képeket aznap megkapod hirdetéshez optimalizálva</span>
-					</li>
-				</ol>
-				<a class="hero__button btn" href="#miert">Hogyan működik?</a>
-			</article>
-			<aside>
-				<div id="slider" class="slider" role="region" aria-roledescription="carousel" aria-label="Használt Autó Fotózás slider">
-					{% for slide in slider %}
-						<div class="slide" role="group" aria-roledescription="slide" aria-label="{{ slide.id }} / {{ slider | size }}">
-							<figure class="slide__image slide__image--before">
-								<img
-									src="{{ slide.before }}"
-									alt="{{ slide.beforeAlt }}"
-									width="700"
-									height="467"
-									loading="{{ slide.loading }}"
-									fetchpriority="{{ slide.fetchpriority }}"
-									decoding="async">
-								<figcaption>{{ slide.beforeAlt }}</figcaption>
-								<i class="slide__icon fas fa-times-circle text-red"></i>
-							</figure>
-
-							<i class="slide__arrow fas fa-arrow-down"></i>
-
-							<figure class="slide__image slide__image--after">
-								<img
-									src="{{ slide.after }}"
-									alt="{{ slide.afterAlt }}"
-									width="700"
-									height="467"
-									loading="{{ slide.loading }}"
-									fetchpriority="{{ slide.fetchpriority }}"
-									decoding="async">
-								<figcaption class="slide__caption slide__caption--after">{{ slide.afterAlt }}</figcaption>
-								<i class="slide__icon fas fa-check-circle text-green"></i>
-							</figure>
-						</div>
-					{% endfor %}
-				</div>
-
-				<div class="slider-pagination">
-					{% for slide in slider %}
-						<button class="slider-dot{% if forloop.first %} slider-dot--active{% endif %}" aria-label="{{ slide.id }}. kép"{% if forloop.first %} aria-current="true"{% endif %}></button>
-					{% endfor %}
-				</div>
-			</aside>
-		</div>
+		<article class="container">
+			<h1 class="hero__h1">Használt Autó Fotózás Budapesten</h1>
+			<p class="hero__title h1">Profi első benyomás az autódnak</p>
+			<p class="hero__text">Egy igényes autó megérdemli, hogy valósághűen legyen bemutatva. A vevők egyetlen thumbnailből döntik el, hogy rákattintanak-e a hirdetésedre. Én abban segítek, hogy az autód ne egy legyen a sok telefonos kép között.</p>
+			<a class="hero__button btn" href="#hogyan">Megnézem, hogyan működik</a>
+		</article>
 	</header>
 
-	<section class="section about">
-		<div class="container">
-			<details class="about__grid">
-				<summary class="about__summary">
-					<img class="about__image" src="/assets/images/roland.webp" alt="Szia, Roland vagyok, én leszek a fotósod. 🤗" title="Szia, Roland vagyok, én leszek a fotósod. 🤗">
-					<h2 class="about__title h4">Szia, Roland vagyok. Én leszek a fotósod.</h2>
-					<p class="about__text">Nem akarom elvenni a lényeget az autókról, de ha meg akarsz ismerni, kattints ide.</p>
-				</summary>
-				<div class="about__content">
-					<p>Több mint öt éve fotózom autókat. Eleinte csak hobbinak indult, aztán rájöttem, hogy ebből valami komolyabb is lehet. Azóta rengeteg autót láttam, de mindegyiket úgy fotózom, mintha a sajátom lenne. Nem csak technikailag, hanem hozzáállásban is.</p>
-					<p>Az elmúlt években sokat foglalkoztam azzal, hogyan viselkednek a vevők online — mit keresnek, hova néznek először, mi az, ami kattintásra ösztönöz. Ezeket a tapasztalatokat építem be minden használt autó fotózásba.</p>
-					<p>Szeretem, ha az autó karaktere kijön a képeken, és ha a tulajdonos is újra beleszeret, mielőtt eladja. Szóval ha együtt dolgozunk, nem csak profi autós képeket kapsz, hanem egy olyan hozzáállást is, ami tényleg segít eladni az autódat.</p>
-				</div>
-			</details>
-		</div>
+	<section id="rolam" class="section section--about">
+		<details class="container">
+			<summary class="about__summary">
+				<img class="about__image" src="/assets/images/roland.webp" alt="Szia, Roland vagyok, én leszek a fotósod. 🤗" title="Szia, Roland vagyok, én leszek a fotósod. 🤗">
+				<h2 class="about__title h4">Szia, Roland vagyok. Én leszek a fotósod.</h2>
+				<p class="about__text">Nem akarom elvenni a lényeget az autókról, de ha meg akarsz ismerni, kattints ide.</p>
+			</summary>
+			<div class="about__content">
+				<p>Már több mint 6 éve fotózom autókat. Eleinte hobbinak indult, aztán egyre komolyabb szerepet kapott az életemben. Azóta rengeteg autót láttam, és mindegyikhez úgy állok hozzá, mintha a sajátom kerülne hirdetésbe.</p>
+				<p>Az elmúlt években sokat foglalkoztam azzal is, hogyan viselkednek a vevők online: mire figyelnek fel, hova néznek először, mitől tűnik komolyan vehetőnek egy hirdetés. Ezeket a tapasztalatokat építem be minden használtautó-fotózásba.</p>
+				<p>Szeretem, ha az autó karaktere kijön a képeken, és ha a tulajdonos is újra ránéz úgy, hogy <em>“basszus, ez tényleg jól néz ki”</em>. Ha együtt dolgozunk, igényes autós képeket kapsz, hirdetési szemlélettel és olyan hozzáállással, ami segít jobban bemutatni az autódat.</p>
+			</div>
+		</details>
 	</section>
 
-	<section id="miert" class="section section--light">
+	<section id="hogyan" class="section how">
 		<div class="container">
-			<h2 class="section__title">Miért viszik el hamarabb a profin fotózott autókat?</h2>
-			<div class="why-grid">
-				<div class="card">
-					<i class="card__icon fas fa-clock"></i>
-					<h3 class="card__title">Azonnal beleszeretnek az autódba</h3>
-					<p class="card__text">A vevők először a képeket nézik. Ha a fotóid profik, az autód már a találatok között kitűnik, mielőtt bármit elolvasnának.</p>
-				</div>
-				<div class="card">
-					<i class="card__icon fas fa-money-bill-trend-up"></i>
-					<h3 class="card__title">Nem fognak annyit alkudni</h3>
-					<p class="card__text">Egy igényesen fotózott autó rendezettnek és gondosnak tűnik, és a vevők is azt érzik, hogy korrekt eladóval van dolguk.</p>
-				</div>
-				<div class="card">
-					<i class="card__icon fas fa-couch"></i>
-					<h3 class="card__title">Kevesebb várakozás, több komoly vevő</h3>
-					<p class="card__text">A profi képek megszűrik a komolytalan érdeklődőket. Nem kell heteket várnod: gyorsabban találsz valódi vevőt.</p>
-				</div>
-				<div class="card">
-					<i class="card__icon fas fa-crosshairs"></i>
-					<h3 class="card__title">A te hirdetésedre kattintanak először</h3>
-					<p class="card__text">Mindegy, hogy Corollád vagy Corvette-ed van, ha a képeid profik, az autód hirdetése kitűnik a mobilos fotók közül.</p>
-				</div>
-			</div>
-			<div class="btn-container">
-				<a class="btn" href="#arak">Mennyibe kerül?</a>
-			</div>
-		</div>
-	</section>
-
-	<section id="arak" class="section">
-		<div class="container">
-			<h2 class="section__title">A legjobb befektetés, amit az autódért tehetsz eladás előtt</h2>
-			<p class="mb-3">Mindenki bizonytalan volt az első fotózás előtt, aztán jók meglepődtek, amikor gyorsabban eladták.</p>
-			<article class="plan plan--basic">
-				<div class="plan__text">
-					<h3 class="plan__name">Profi Használt Autó Fotózás</h3>
-					<ul class="checklist">
-						<li>
-							<i class="checklist__icon fas fa-check-circle"></i>
-							12 profi fotó
-						</li>
-						<li>
-							<i class="checklist__icon fas fa-check-circle"></i>
-							Aznapi átadás
-						</li>
-						<li>
-							<i class="checklist__icon fas fa-check-circle"></i>
-							Hirdetéshez optimalizált képek
-						</li>
-						<li>
-							<i class="checklist__icon fas fa-check-circle"></i>
-							Gyorsabb, stresszmentesebb eladás
-						</li>
-					</ul>
-					<span class="label">Már csak 4 ajánlat ezen az áron!</span>
-					<p class="plan__price plan__price--new h1"><ins>29.900 Ft</ins></p>
-					<p><strong class="text-light">A legkisebb befektetés, ami a legtöbbet hozza az autód eladásából.</strong></p>
-					<p class="plan__disclaimer">Ennyi az egész: hozd el tisztán az autót, a többit én intézem. Egy óra alatt meg is vagyunk a fotózással, és már aznap hirdetheted is az autódat az új képekkel.</p>
-				</div>
-				<img class="plan__photo" src="/assets/images/plan-photo.webp" alt="Használt Autó Fotózás" width="1000" height="667" loading="lazy" fetchpriority="low" decoding="async">
-			</article>
-			<p class="for-dealers"><strong>Autókereskedőknek is!</strong><br> Profi fotókkal gyorsabban forog a készlet, erősebb a bizalom, és több autó fotózására mennyiségi kedvezményt adok.</p>
-			<div class="button-and-link">
-				<a class="btn" href="#kapcsolat">Visszahívást kérek</a>
-				<a href="#velemenyek">Tovább olvasok még</a>
-			</div>
-		</div>
-	</section>
-
-	<section id="velemenyek" class="section section--light">
-		<div class="container">
-			<h2 class="section__title">Ők már eladták. Te még gondolkodsz?</h2>
-			<div class="quotes">
-				{% for item in testimonials %}
-					<article class="quote">
-						<img
-							class="quote__image"
-							src="{{ item.image }}"
-							srcset="{{ item.image_sm }} 80w, {{ item.image }} 120w"
-							sizes="(max-width: 768px) 80px, 120px"
-							alt="{{ item.car }} Használt Autó Fotózás"
-							width="120"
-							height="120"
-							loading="lazy"
-							decoding="async"
-							fetchpriority="low"
-						>
-						<p class="quote__text">{{ item.text }}</p>
-						<footer class="quote__footer">
-							<cite class="quote__author">{{ item.author }}</cite> &mdash; {{ item.car }}
-						</footer>
-					</article>
-				{% endfor %}
-			</div>
-			<p><a href="#kapcsolat">Töltsd ki az űrlapot</a>, és nézzük meg, megéri-e Neked is a profi használtautó-fotózás.</p>
-			<div class="case-study">
-				<h3 class="case-study__title">Így keresett Anna 200.000 Ft-ot a használt autó fotózással</h3>
+			<h2 class="section__title">Hirdetésre optimalizált autófotók, sallang nélkül</h2>
+			<div class="how__intro">
 				<article>
-					<p>Amikor Anna elhatározta, hogy eladja a kis Swiftjét, bizonytalan volt. Tudta, hogy nem újszerű, de szerette volna tisztességes áron továbbadni. <strong>Reálisan 900.000 Ft</strong>-ot remélt érte, és úgy gondolta, ha 1 millióért felrakja, akkor talán lesz valaki, aki lealkudja 900-ra.</p>
-					<p>A használt autó fotózás után már aznap felrakta az új, profi képeket, és húzott is egy merészet a képek láttán. Azt mondta, hogy <em>„ez az autó ettől igenis többet ér”</em>, majd felrakta a hirdetést <strong>1.100.000</strong> Forintért.</p>
-					<p><strong>Két napon belül el is vitték az autóját, méghozzá <span class="text-green">alku nélkül</span></strong>. Anna 200.000 Forinttal többért adta el a Swifjét, mint ahogy eredetileg tervezte.</p>
-					<p>A profi fotó nem csak az autót mutatta meg jobb fényben, hanem Annának is önbizalmat adott. Ez volt a különbség a <em>“hátha elmegy 900-ért”</em> és az <em>“1,1 millióért vitték el”</em> között.</p>
+					<p>A jó használtautó-fotó első ránézésre komolyan vehetővé teszi az autót.</p>
+					<p>Ehhez számít a helyszín, a fény, a szög, a háttér és a beltér rendezettsége is. Úgy fotózom az autót, hogy igényes, átlátható és valós képet adjon róla.</p>
+					<p>A cél egy szalonos hatású hirdetés, amire szívesebben kattintanak rá az érdeklődők.</p>
 				</article>
-				<figure>
-					<img class="case-study__image" src="/assets/images/case-study-proof.webp" alt="Anna 200.000 Forinttal többért adta el a Swifjét, mint ahogy eredetileg tervezte." title="Anna 200.000 Forinttal többért adta el a Swifjét, mint ahogy eredetileg tervezte." width="580" height="550" loading="lazy" decoding="async" fetchpriority="low">
-					<figcaption>Annával a beszélgetésünk Instagramon</figcaption>
-				</figure>
+				<img class="how__photo" src="/assets/images/og_image.webp" alt="Sárga Ford Focus ST profi használtautó-fotózása rendezett városi háttérrel">
 			</div>
-			<div class="button-and-link">
-				<a class="btn" href="#kapcsolat">Szeretném kipróbálni</a>
-				<a href="#galeria">Megnéznék pár autós fotót</a>
+			<div class="how__grid">
+				<article class="how__item">
+					<h3 class="how__title h4">Nyugodt háttér, tiszta fókusz</h3>
+					<p class="how__text">Olyan helyszínt keresek, ahol az autó marad a főszerepben. A zsúfolt parkolóban, autómosóban és benzinkúton fotózott képek miatt a hirdetett autók azonnal olcsóbbnak tűnnek.</p>
+				</article>
+				<article class="how__item">
+					<h3 class="how__title h4">Jó szögek és arányos képek</h3>
+					<p class="how__text">Olyan szögből és optikával fotózom, ahol az autó formája és állapota szakszerűen látszik. Így lesz a hirdetés rendezett, természetes és szalonos hatású.</p>
+				</article>
+				<article class="how__item card">
+					<h3 class="how__title h4">Külső, belső és részletek</h3>
+					<p class="how__text">Készítek külső képeket, beltéri képeket és olyan részletfotókat is, amelyek segítik a vevőt: felni, műszerfal, csomagtér, felszereltség vagy különleges modelljelzés.</p>
+				</article>
+				<article class="how__item">
+					<h3 class="how__title h4">Természetes utómunka</h3>
+					<p class="how__text">A képeket megtisztítom vizuálisan, javítom a zavaró tükröződéseket és kiszedem a háttérhibákat, ahol kell. Az autó színe és állapota valós marad.</p>
+				</article>
+			</div>
+			<p>A végeredmény egy igényes, átlátható képanyag, amit nyugodtan fel tudsz tölteni a hirdetésedhez.</p>
+			<div class="btn-container">
+				<a class="btn" href="#folyamat">Mutasd a folyamatot</a>
+			</div>
+		</div>
+	</section>
+
+	<section id="folyamat" class="section section--light">
+		<div class="container">
+			<h2 class="section__title">Hogyan zajlik a használtautó fotózás?</h2>
+			<p>A célom az, hogy neked minél kevesebb dolgod legyen a folyamattal. Egyeztetünk, kiválasztjuk a megfelelő helyszínt, én pedig végigvezetem a fotózást.</p>
+			<ol class="process">
+				<li class="step">
+					<h3 class="step__title h4">Megbeszéljük az autót és a helyszínt</h3>
+					<p class="step__text">Telefonon vagy üzenetben egyeztetjük, milyen autóról van szó, hol lenne kényelmes találkozni, és mikor érdemes fotózni. A fotózás előtt annyit kérek, hogy az autó kívül-belül tisztán érkezzen.</p>
+				</li>
+				<li class="step">
+					<h3 class="step__title h4">Beállítjuk az autót a jó fényhez</h3>
+					<p class="step__text">A helyszínen megnézem, honnan mutat a legjobban az autó. Fotózás közben többször átállítjuk, hogy a külső képek, a beltér és a részletek is megfelelő fényt kapjanak.</p>
+				</li>
+				<li class="step">
+					<h3 class="step__title h4">Elkészül a teljes hirdetési képanyag</h3>
+					<p class="step__text">Készítek külső képeket, beltérfotókat és fontos részleteket is. Ha az autón van különleges felszereltség, modelljelzés vagy olyan részlet, amit érdemes megmutatni, azt külön befotózom.</p>
+				</li>
+				<li class="step">
+					<h3 class="step__title h4">24 órán belül megkapod a képeket</h3>
+					<p class="step__text">A kész képeket Google Drive mappában adom át. Megkapod őket teljes méretben, valamint hirdetéshez optimalizált változatban is, így Neked csak feltöltened kell a hirdetéshez és várni az érdeklődőket.</p>
+				</li>
+			</ol>
+			<div class="btn-container">
+				<a class="btn" href="#galeria">Mutass képeket</a>
 			</div>
 		</div>
 	</section>
 
 	<section id="galeria" class="section">
 		<div class="container">
-			<h2 class="section__title">Minden autó más, de mindegyik megérdemli, hogy a legjobban nézzen ki.</h2>
-			<p>Teljesen mindegy, hogy városi kisautód, SUV-d, családi kombid vagy épp az álomautód szeretnél eladni, profi fotókkal mindig könnyebb. A használt autó fotózással az a célom, hogy a hirdetésed kitűnjön, és a vevőd már a képeken beleszeressen a kocsidba. Íme néhány példa a munkáimból.</p>
-			<section class="gallery">
+			<h2 class="section__title">Így néz ki egy igényesen bemutatott autó</h2>
+			<p>Minden autó más, ezért a fotózásnál nem sablont követek. A cél mindig ugyanaz: tiszta, rendezett, hirdetésre alkalmas képek, ahol az autó áll a középpontban.</p>
+			<div class="gallery">
 				{% for image in gallery %}
 					{% assign imagePath = "./src/assets/images/gallery/" | append: image.file %}
 					{% image imagePath, image.alt, "(max-width: 991px) 50vw, (max-width: 1199px) 33vw, 33vw" %}
 				{% endfor %}
-			</section>
-			<div class="button-and-link">
-				<a class="btn" href="#kapcsolat">Időpontot foglalok</a>
+			</div>
+			<div class="btn-container">
+				<a class="btn" href="#arak">Szeretnék ilyen képeket</a>
+			</div>
+		</div>
+	</section>
+
+	<section id="velemenyek" class="section section--light">
+		<div class="container">
+			<h2 class="section__title">Ők már igényes képekkel hirdették meg az autójukat</h2>
+			<p>A profi fotók nem varázsolnak új autót a régiből. Abban segítenek, hogy az autó igényesebb, átláthatóbb és komolyabban vehető legyen a hirdetésben. Több ügyfelem is úgy jelzett vissza, hogy az új képekkel gyorsabban érkeztek érdeklődők, vagy magabiztosabban tudták meghirdetni az autójukat.</p>
+			<div class="testimonials">
+				<div class="quotes">
+					{% for item in testimonials %}
+						<article class="quote">
+							<img
+								class="quote__image"
+								src="{{ item.image }}"
+								srcset="{{ item.image_sm }} 80w, {{ item.image }} 120w"
+								sizes="(max-width: 768px) 80px, 120px"
+								alt="{{ item.car }} Használt Autó Fotózás"
+								width="120"
+								height="120"
+								loading="lazy"
+								decoding="async"
+								fetchpriority="low"
+							>
+							<p class="quote__text">{{ item.text }}</p>
+							<footer class="quote__footer">
+								<cite class="quote__author">{{ item.author }}</cite> &mdash; {{ item.car }}
+							</footer>
+						</article>
+					{% endfor %}
+				</div>
+				<div class="case-study">
+					<!-- <h3 class="case-study__title">Jobb képek, magabiztosabb ár</h3> -->
+					<p class="case-study__text">Anna eredetileg 900.000 Ft körül számolt az autójával. A fotózás után úgy érezte, az autó igényesebb bemutatást kapott, mint amit a legtöbb hasonló hirdetésnél látni. Végül magasabb áron tette fel, és pár napon belül elvitték.</p>
+					<p class="case-study__text">A tanulság egyszerű: egy jól bemutatott autót könnyebb komolyan venni; vevőként és eladóként is.</p>
+					<img class="case-study__image" src="/assets/images/case-study-proof.webp" alt="Anna 200.000 Forinttal többért adta el a Swifjét, mint ahogy eredetileg tervezte." width="580" height="550" loading="lazy" decoding="async" fetchpriority="low">
+ 				</div>
+			</div>
+			<div class="btn-container">
+				<a class="btn" href="#arak">Mit tartalmaz a fotózás?</a>
+			</div>
+		</div>
+	</section>
+
+	<section id="arak" class="section">
+		<div class="container">
+			<h2 class="section__title">Mit kapsz a fotózás után?</h2>
+			<p class="mb-3">A fotózás végén egy kész, hirdetésre optimalizált képanyagot kapsz. Olyan fotókat, amelyeket nyugodtan feltölthetsz a használtautó-hirdetésedhez, mert igényesen, átláthatóan és valósághűen mutatják be az autódat.</p>
+			<article class="plan plan--basic">
+				<div class="plan__text">
+					<h3 class="plan__name">Profi használtautó-fotózás</h3>
+					<ul>
+						<li><i class="fas fa-check-circle text-green"></i>&nbsp; legalább 12 gondosan válogatott, utómunkázott, hirdetéshez optimalizált méretű fotó</li>
+						<li><i class="fas fa-check-circle text-green"></i>&nbsp; külső képek, beltérfotók és fontos részletek</li>
+						<li><i class="fas fa-check-circle text-green"></i>&nbsp; teljes méretű és hirdetésre optimalizált képváltozatok</li>
+						<li><i class="fas fa-check-circle text-green"></i>&nbsp; természetes, színhű utómunka</li>
+						<li><i class="fas fa-check-circle text-green"></i>&nbsp; átadás 24 órán belül</li>
+					</ul>
+					<p class="plan__price plan__price--new h1"><ins>29.900 Ft</ins></p>
+					<p class="plan__disclaimer">A fotózás általában 30–60 percet vesz igénybe. Budapesten belül nincs külön kiszállási díj, a pontos helyszínt együtt választjuk ki.</p>
+				</div>
+				<img class="plan__photo" src="/assets/images/plan-photo.webp" alt="Használt Autó Fotózás" width="1000" height="667" loading="lazy" fetchpriority="low" decoding="async">
+			</article>
+			<div class="btn-container">
+				<a class="btn" href="#kapcsolat">Visszahívást kérek</a>
+				<br><br>
 				<a href="#gyik">Lenne még pár kérdésem</a>
+			</div>
+		</div>
+	</section>
+
+	<section id="kereskedes" class="section section--lighter">
+		<div class="container">
+			<div class="dealers">
+				<article>
+					<h2 class="section__title">Több autót hirdetsz?</h2>
+					<p>Ha autókereskedésnek, flottának vagy több eladó autónak szeretnél egységes, igényes képeket, külön árat adok.</p>
+					<p>Nagyobb mennyiségnél gyorsabban és kiszámíthatóbban tudunk dolgozni: az autók azonos vizuális színvonalon kerülnek fel a hirdetésekbe, a készlet pedig rendezettebb, bizalomépítőbb képet mutat.</p>
+					<p>Ez különösen akkor hasznos, ha fontos, hogy a hirdetéseid ne alkalmi telefonos képeknek tűnjenek, hanem egységes, professzionális megjelenést kapjanak.</p>
+					<br>
+					<a class="btn btn--secondary" href="#kapcsolat">Egyeztessünk több autóról</a>
+				</article>
+				<div class="callout">
+					<h3 class="callout__title">Kereskedéseknek és flottáknak</h3>
+					<ul class="callout__list list">
+						<li>több autó fotózása egy alkalommal</li>
+						<li>egységes képi stílus</li>
+						<li>gyorsabb munkafolyamat</li>
+						<li>mennyiségi kedvezmény</li>
+						<li>hirdetésre optimalizált képek minden autóról</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -226,25 +203,27 @@ title: Használt Autó Fotózás Budapest
 	<section id="gyik" class="section section--light">
 		<div class="container">
 			<h2 class="section__title">Gyakran Ismételt Kérdések</h2>
-			{% for item in faq %}
-				<details class="faq">
-					<summary class="faq__question">{{ item.question }}</summary>
-					<p class="faq__answer">{{ item.answer }}</p>
-				</details>
-			{% endfor %}
-			<div class="button-and-link">
+			<div class="faqs">
+				{% for item in faq %}
+					<details class="faq">
+						<summary class="faq__question">{{ item.question }}</summary>
+						<p class="faq__answer">{{ item.answer }}</p>
+					</details>
+				{% endfor %}
+			</div>
+			<div class="btn-container">
 				<a class="btn" href="#kapcsolat">Kapcsolatfelvétel</a>
 			</div>
 		</div>
 	</section>
 
-	<section id="kapcsolat" class="section">
+	<section id="kapcsolat" class="contact section">
 		<div class="container">
-			<h2 class="section__title">Segítek az autódat gyorsabban eladni</h2>
-			<p>Nem kell most azonnal döntened. Írd meg nyugodtan, hogy érdeklődsz, és megbeszéljük a részleteket telefonon.</p>
+			<h2 class="section__title">Szeretnéd igényesen meghirdetni az autódat?</h2>
+			<p>Írd meg az elérhetőségedet, és visszahívlak. Röviden átbeszéljük, milyen autóról van szó, hol lenne kényelmes a fotózás, és mikor tudjuk megoldani.</p>
 			<div class="contact-grid">
 				<div>
-					<h3>Visszahívlak, és megnézzük, megéri-e neked is:</h3>
+					<h3>Visszahívlak, és egyeztetjük a részleteket</h3>
 					<form class="form" name="kapcsolat" method="POST" action="/koszonom" netlify netlify-honeypot="bot-field">
 						<input type="hidden" name="form-name" value="kapcsolat">
 						<div class="form__group">
@@ -263,23 +242,23 @@ title: Használt Autó Fotózás Budapest
 							<label class="form__label" for="bot-field">Ne töltsd ki, ha ember vagy!</label>
 							<input class="form__input" type="text" id="bot-field" name="bot-field">
 						</div>
-						<p class="form__disclaimer"><small><i class="fas fa-info-circle text-yellow"></i>&nbsp; Nem adom át senkinek az adataidat, csak visszahívlak megbeszélni a részleteket.</small></p>
-						<button class="form__button btn" type="submit" onclick="if(window.fbq){fbq('track','Lead',{form:'visszahivas'});}">Visszahívást kérek</button>
+						<p class="form__disclaimer"><small><i class="fas fa-info-circle"></i>&nbsp; Adataidat csak kapcsolatfelvételre használom. Nem küldök hírlevelet és nem adom tovább senkinek.</small></p>
+						<button class="form__button btn" type="submit">Visszahívást kérek</button>
 					</form>
 				</div>
 				<div>
-					<h3>Vagy keress közvetlenül:</h3>
+					<h3>Vagy keress közvetlenül</h3>
 					<div class="contact-card">
-						<a class="btn btn--secondary" href="tel:+36205914620" onclick="if(window.fbq){fbq('track','Contact',{method:'phone'});}"><i class="fas fa-phone"></i>&nbsp; Hívj telefonon</a>
-						<p class="contact-card__text">Ha nem veszem fel, visszahívlak, amint tudlak.</p>
+						<a class="btn btn--secondary" href="tel:+36205914620"><i class="fas fa-phone"></i>&nbsp; Hívj telefonon</a>
+						<p class="contact-card__text">Ha gyorsan szeretnél egyeztetni, hívj nyugodtan. Ha épp fotózom vagy vezetek, visszahívlak, amint tudlak.</p>
 					</div>
 					<div class="contact-card">
 						<a class="btn btn--secondary" href="https://instagram.com/rolandszabo.photo" target="_blank" rel="noopener noreferrer" onclick="if(window.fbq){fbq('track','Contact',{method:'instagram'});}"><i class="fab fa-instagram"></i>&nbsp; DM Instagramon</a>
-						<p class="contact-card__text">Instagramon azonnal kapok értesítést, így hamar válaszolok.</p>
+						<p class="contact-card__text">Instagramon is írhatsz, ott általában hamar látom az üzeneteket.</p>
 					</div>
 					<div class="contact-card">
-						<a class="btn btn--secondary" href="mailto:hi@rolandszabo.photo" target="_blank" rel="noopener noreferrer" onclick="if(window.fbq){fbq('track','Contact',{method:'email'});}"><i class="fas fa-envelope"></i>&nbsp; Írj emailt</a>
-						<p class="contact-card__text">Az emailekre jellemzően pár órán belül válaszolok.</p>
+						<a class="btn btn--secondary" href="mailto:hi@rolandszabo.photo" onclick="if(window.fbq){fbq('track','Contact',{method:'email'});}"><i class="fas fa-envelope"></i>&nbsp; Írj emailt</a>
+						<p class="contact-card__text">Ha inkább leírnád a részleteket, küldhetsz emailt is.</p>
 					</div>
 				</div>
 			</div>
@@ -298,5 +277,4 @@ title: Használt Autó Fotózás Budapest
 {% include "_includes/partials/privacy-policy.html" %}
 {% include "_includes/partials/schema-faq.liquid" %}
 {% include "_includes/partials/schema-person.liquid" %}
-{% include "_includes/partials/schema-slider.liquid" %}
 {% include "_includes/partials/schema-localbusiness.liquid" %}

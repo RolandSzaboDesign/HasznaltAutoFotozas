@@ -1,30 +1,42 @@
 [
   {
-    "question": "Olcsóbb autónál is megéri a profi fotózás?",
-    "answer": "Abszolút. Nem csak az ár számít, hanem hogy kitűnj a sok hasonló hirdetés közül. Ha gyorsabban elmegy a kocsid, már azzal visszahozta az árát."
+    "question": "Hol történik a fotózás?",
+    "answer": "A helyszínt közösen választjuk ki. Általában olyan helyet keresünk, ami neked is kényelmes, és az autónak is jól áll. Budapesten belül nincs külön kiszállási díj."
   },
   {
-    "question": "Mi van, ha olyan autóm van, amiből rengeteg van fent?",
-    "answer": "Pont ezért számít igazán a fotó. A vevő nem fogja végiglapozni a századik Golfot vagy Astrát, hanem arra kattint, amelyik jól néz ki. A jó képek szó szerint megállítják a görgetést, és a te hirdetésed lesz az, amire rákattintanak."
-  },
-  {
-    "question": "És ha ritkaságom van, aminek szűk célközönsége van?",
-    "answer": "A ritka autóknál a képek még fontosabbak. Egy profi fotósorozat azt üzeni a vevőnek, hogy vigyáztál az autóra és értékeled, emiatt kevesebbet akarnak majd alkudni. Láttad a galériában a piros C3 Corvette-et? 1500 Euróval többért vitték el, mint a tulaj eredeti telefonos képeivel. ;)"
+    "question": "Mennyi ideig tart a fotózás?",
+    "answer": "Általában 30–60 perc alatt elkészülünk. Ez autótól, helyszíntől és részletfotóktól is függ, de nem kell egész délutános programra készülnöd."
   },
   {
     "question": "Mikor kapom meg a képeket?",
-    "answer": "Még aznap este. Lefotózzuk, hazamész, és mire lazítasz otthon, a képek ott lesznek a postafiókodban. Olyan méretben és minőségben fogom küldeni, hogy letöltöd a linkről és azonnal töltheted is fel a hahu-ra vagy a Marketplacere."
+    "answer": "A kész képeket 24 órán belül átadom Google Drive mappában. Megkapod őket teljes méretben, valamint hirdetéshez optimalizált, 2000 px széles változatban is."
   },
   {
-    "question": "Kell valamit előkészítenem?",
-    "answer": "Annyit mindenképpen tegyél meg, hogy tisztán hozod az autót a fotózásra. Egy gyors mosás kívül, egy gyors portörlés belül, és már fotózhatunk is. Természetesen csinálhatsz teljeskörű tisztítást is, annál jobb lesz a végeredmény!"
+    "question": "Mit kell előkészítenem a fotózás előtt?",
+    "answer": "A legfontosabb, hogy az autó kívül-belül tisztán érkezzen. A beltérből érdemes kivenni minden személyes tárgyat, üdítős dobozt, illatosítót, kábeleket és apróságokat."
   },
   {
-    "question": "Pontosan mennyi képet kapok?",
-    "answer": "Alapesetben 12 retusált, hirdetéshez optimalizált képet kapsz, pont annyit, amennyit a Használtautó.hu enged. Ez elég ahhoz, hogy a vevő minden fontos részletet lásson, és ne legyenek fölösleges kérdései a fejében, mielőtt felhívna. Ha több fotóra van szükséged, pl. külföldi oldalakra, megbeszéljük."
+    "question": "Készülnek beltérfotók is?",
+    "answer": "Igen. Külső képek, beltérfotók és fontos részletek is készülnek. Ha van különleges felszereltség, modelljelzés vagy olyan elem, amit érdemes megmutatni, azt külön befotózom."
   },
   {
-    "question": "Őszintén, megéri pénzt áldozni egy fotózásra?",
-    "answer": "Teljesen jogos kérdés. De gondolj bele: ha a képek miatt 1–2 héttel hamarabb elmegy a kocsid, vagy 50–100 ezer forinttal többet kapsz érte, már nyertél. Volt ügyfelem, aki 1,1 millióért adta el a Swiftjét, amit 900 ezerért szeretett volna. Ez a különbség egy óra fotózás ára volt."
+    "question": "Eltünteted a hibákat az autóról?",
+    "answer": "Az autó állapotát nem írom át képszerkesztéssel. A cél az igényes, valósághű bemutatás. Zavaró háttérelemeket, tükröződéseket vagy apró vizuális zavarokat javítok, ahol szükséges."
+  },
+  {
+    "question": "Mi történik rossz idő esetén?",
+    "answer": "A felhős idő nem gond, sokszor kifejezetten jól működik autófotózáshoz. Esőben viszont általában új időpontot egyeztetünk, mert a vizes autó félrevezető lehet, és a tisztaságot is nehéz tartani."
+  },
+  {
+    "question": "Vidékre is kimész?",
+    "answer": "Igen, megbeszélés szerint. Budapesten belül nincs külön kiszállási díj, vidéki fotózásnál a helyszín és a távolság alapján egyeztetünk."
+  },
+  {
+    "question": "Írsz hirdetésszöveget is?",
+    "answer": "Alapból a szolgáltatás a fotózásról szól, de szívesen adok tanácsot a hirdetésedhez. Ha szeretnéd, megbeszéljük, hogyan érdemes bemutatni az autót a képek mellé."
+  },
+  {
+    "question": "Kereskedésnek is vállalsz fotózást?",
+    "answer": "Igen. Több autó esetén egyedi árat adok, és egységes képi stílusban tudjuk befotózni a készletet. Keress bátran egyedi ajánlatért."
   }
 ]
