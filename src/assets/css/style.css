@@ -192,7 +192,7 @@ body {
 	}
 }
 
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
 	body {
 		font-size: 1.8rem;
 		line-height: 1.625;
@@ -663,11 +663,66 @@ figcaption {
 .hero {
 	position: relative;
 	overflow: hidden;
-	text-align: center;
 	background:
-		radial-gradient(circle at 72% 18%, rgba(184, 135, 95, .16), transparent 34rem),
+		radial-gradient(circle at 72% 18%, var(--surface-glow-soft), transparent 34rem),
 		radial-gradient(circle at 20% 100%, rgba(127, 157, 184, .07), transparent 38rem),
 		linear-gradient(135deg, var(--bg-dark) 0%, var(--bg) 58%, #0c1218 100%);
+}
+
+@media only screen and (max-width: 991.98px) {
+	.hero--showcase {
+		text-align: center;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.hero--showcase {
+		text-align: left;
+	}
+}
+
+.hero__grid {
+	position: relative;
+	z-index: 1;
+	display: grid;
+	align-items: center;
+}
+
+@media only screen and (max-width: 991.98px) {
+	.hero__grid {
+		gap: 5rem;
+	}
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+	.hero__grid {
+		grid-template-columns: minmax(0, 1fr) minmax(44rem, .9fr);
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.hero__grid {
+		grid-template-columns: minmax(0, 1fr) minmax(52rem, .9fr);
+		gap: 8rem;
+	}
+}
+
+.hero__content {
+	max-width: 68rem;
+}
+
+@media only screen and (max-width: 991.98px) {
+	.hero__content {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.hero__content {
+		margin-left: 0;
+		margin-right: 0;
+	}
 }
 
 .hero__h1 {
@@ -709,13 +764,158 @@ figcaption {
 }
 
 .hero__text {
-	max-width: 80rem;
-	margin-left: auto;
-	margin-right: auto;
+	max-width: 62rem;
 }
 
-.hero__button {
-	margin-top: 3rem;
+@media only screen and (max-width: 991.98px) {
+	.hero__text {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.hero__text {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+@media only screen and (max-width: 575.98px) {
+	.hero__button {
+		margin-top: 2rem;
+	}
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+	.hero__button {
+		margin-top: 2.5rem;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.hero__button {
+		margin-top: 3rem;
+	}
+}
+
+.hero__media {
+	position: relative;
+	z-index: 1;
+	margin: 0 auto;
+}
+
+@media only screen and (max-width: 767.98px) {
+	.hero__media {
+		max-width: 58rem;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+	.hero__media {
+		max-width: 64rem;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.hero__media {
+		max-width: none;
+		margin: 0;
+	}
+}
+
+.hero__media::before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	background:
+		radial-gradient(circle at 80% 10%, var(--surface-glow-soft), transparent 32rem),
+		linear-gradient(135deg, var(--surface-sheen-muted), var(--surface-sheen-muted-soft)),
+		var(--bg);
+	box-shadow: var(--surface-shadow-soft);
+}
+
+@media only screen and (max-width: 575.98px) {
+	.hero__media::before {
+		inset: -1rem;
+		border-radius: calc(var(--surface-radius-lg) + .5rem);
+	}
+}
+
+@media only screen and (min-width: 576px) {
+	.hero__media::before {
+		inset: -2rem;
+		border-radius: calc(var(--surface-radius-lg) + 1rem);
+	}
+}
+
+.hero__image {
+	display: block;
+	width: 100%;
+	object-fit: cover;
+	border: 1px solid var(--surface-border-strong);
+	background-color: var(--bg);
+	box-shadow: var(--surface-shadow-soft);
+}
+
+.hero__image--main {
+	border-radius: var(--surface-radius-lg);
+	box-shadow: var(--surface-shadow-strong);
+}
+
+.hero__thumbs {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+@media only screen and (max-width: 575.98px) {
+	.hero__thumbs {
+		gap: .75rem;
+		margin-top: .75rem;
+	}
+}
+
+@media only screen and (min-width: 576px) {
+	.hero__thumbs {
+		gap: 1rem;
+		margin-top: 1rem;
+	}
+}
+
+.hero__image--thumb {
+	aspect-ratio: 1 / 1;
+	border-radius: var(--surface-radius);
+}
+
+.hero__caption {
+	color: var(--text-dark);
+	line-height: 1.5;
+	text-align: center;
+}
+
+@media only screen and (max-width: 767.98px) {
+	.hero__caption {
+		margin-top: 1rem;
+		font-size: 1.3rem;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.hero__caption {
+		margin-top: 2rem;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+	.hero__caption {
+		font-size: 1.4rem;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.hero__caption {
+		font-size: 1.5rem;
+	}
 }
 
 
@@ -1483,11 +1683,11 @@ body.modal-open {
 }
 
 .modal__close {
+	cursor: pointer;
 	position: fixed;
 	top: 1rem;
 	right: 1rem;
 	z-index: 4;
-	cursor: pointer;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -1631,8 +1831,8 @@ body.scroll-lock {
 
 .lightbox__arrow,
 .lightbox__close {
-	position: absolute;
 	cursor: pointer;
+	position: absolute;
 	z-index: 4;
 	display: flex;
 	align-items: center;
