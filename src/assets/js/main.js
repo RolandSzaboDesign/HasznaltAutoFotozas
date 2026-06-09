@@ -65,7 +65,9 @@ const prevImg = lightbox.querySelector('.lightbox__image--prev');
 const currentImg = lightbox.querySelector('.lightbox__image--current');
 const nextImg = lightbox.querySelector('.lightbox__image--next');
 
-const thumbnails = Array.from(document.querySelectorAll('.js-lightbox'));
+const thumbnails = Array.from(
+	document.querySelectorAll('.js-lightbox:not(.gallery-package .js-lightbox)')
+);
 let activeIndex = 0;
 
 function updateLightboxImages(index) {

@@ -103,15 +103,193 @@ title: Használt Autó Fotózás Budapest
 		</div>
 	</section>
 
-	<section id="galeria" class="section">
+	<section id="galeria" class="section gallery-section">
 		<div class="container">
 			<h2 class="section__title">Így néz ki egy igényesen bemutatott autó</h2>
-			<p>Minden autó más, ezért a fotózásnál nem sablont követek. A cél mindig ugyanaz: tiszta, rendezett, hirdetésre alkalmas képek, ahol az autó áll a középpontban.</p>
+			<p>A jó hirdetéshez nem elég egy látványos külső kép. A vevő látni akarja az autó formáját, állapotát, belterét és azokat a részleteket is, amelyek döntésnél számítanak.</p>
+			<p>A lenti kártyák autónként csak néhány képet mutatnak, de jól látszik rajtuk a fotózás lényege: nem különálló szép képek készülnek, hanem egy rendezett, hirdetésre használható képanyag.</p>
 			<div class="gallery">
-				{% for image in gallery %}
-					{% assign imagePath = "./src/assets/images/gallery/" | append: image.file %}
-					{% image imagePath, image.alt, "(max-width: 991px) 50vw, (max-width: 1199px) 33vw, 33vw" %}
-				{% endfor %}
+				<div class="gallery-packages">
+					<article class="gallery-package">
+						<div class="gallery-package__grid">
+							<figure class="gallery-package__image gallery-package__image--main">
+								{% assign imagePath = "./src/assets/images/gallery/sets/kia-ceed-1.webp" %}
+								{% image imagePath, "Kia Ceed SW használtautó fotózás külső fő kép", "(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 600px" %}
+							</figure>
+							<figure class="gallery-package__image">
+								{% assign imagePath = "./src/assets/images/gallery/sets/kia-ceed-2.webp" %}
+								{% image imagePath, "Kia Ceed SW műszerfal fotó hirdetéshez", "(max-width: 767px) 33vw, 220px" %}
+							</figure>
+							<figure class="gallery-package__image">
+								{% assign imagePath = "./src/assets/images/gallery/sets/kia-ceed-3.webp" %}
+								{% image imagePath, "Kia Ceed SW beltérfotó hirdetéshez", "(max-width: 767px) 33vw, 220px" %}
+							</figure>
+							<figure class="gallery-package__image">
+								{% assign imagePath = "./src/assets/images/gallery/sets/kia-ceed-4.webp" %}
+								{% image imagePath, "Kia Ceed SW második külső fotó hirdetéshez", "(max-width: 767px) 33vw, 220px" %}
+							</figure>
+						</div>
+						<div class="gallery-package__content">
+							<h3 class="gallery-package__title h4">Kia Ceed SW</h3>
+							<p class="gallery-package__text">Hétköznapi, jól használható kombi. Ilyen autónál különösen sokat számít, hogy a képek tiszták, átláthatók és komolyan vehetők legyenek.</p>
+						</div>
+					</article>
+
+					<article class="gallery-package">
+						<div class="gallery-package__grid">
+							<figure class="gallery-package__image gallery-package__image--main">
+								{% assign imagePath = "./src/assets/images/gallery/sets/porsche-cayman-1.webp" %}
+								{% image imagePath, "Porsche Cayman használtautó fotózás külső fő kép", "(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 600px" %}
+							</figure>
+							<figure class="gallery-package__image">
+								{% assign imagePath = "./src/assets/images/gallery/sets/porsche-cayman-2.webp" %}
+								{% image imagePath, "Porsche Cayman műszerfal fotó hirdetéshez", "(max-width: 767px) 33vw, 220px" %}
+							</figure>
+							<figure class="gallery-package__image">
+								{% assign imagePath = "./src/assets/images/gallery/sets/porsche-cayman-3.webp" %}
+								{% image imagePath, "Porsche Cayman beltérfotó hirdetéshez", "(max-width: 767px) 33vw, 220px" %}
+							</figure>
+							<figure class="gallery-package__image">
+								{% assign imagePath = "./src/assets/images/gallery/sets/porsche-cayman-4.webp" %}
+								{% image imagePath, "Porsche Cayman felni részletfotó hirdetéshez", "(max-width: 767px) 33vw, 220px" %}
+							</figure>
+						</div>
+						<div class="gallery-package__content">
+							<h3 class="gallery-package__title h4">Porsche Cayman</h3>
+							<p class="gallery-package__text">Sportautónál az állapot mellett az autó karaktere is fontos. A képeknek meg kell mutatniuk, miért érdemes rákattintani a hirdetésre.</p>
+						</div>
+					</article>
+
+					<article class="gallery-package">
+						<div class="gallery-package__grid">
+							<figure class="gallery-package__image gallery-package__image--main">
+								{% assign imagePath = "./src/assets/images/gallery/sets/audi-a6-1.webp" %}
+								{% image imagePath, "Audi A6 Avant használtautó fotózás külső fő kép", "(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 600px" %}
+							</figure>
+							<figure class="gallery-package__image">
+								{% assign imagePath = "./src/assets/images/gallery/sets/audi-a6-2.webp" %}
+								{% image imagePath, "Audi A6 Avant műszerfal fotó hirdetéshez", "(max-width: 767px) 33vw, 220px" %}
+							</figure>
+							<figure class="gallery-package__image">
+								{% assign imagePath = "./src/assets/images/gallery/sets/audi-a6-3.webp" %}
+								{% image imagePath, "Audi A6 Avant beltérfotó hirdetéshez", "(max-width: 767px) 33vw, 220px" %}
+							</figure>
+							<figure class="gallery-package__image">
+								{% assign imagePath = "./src/assets/images/gallery/sets/audi-a6-4.webp" %}
+								{% image imagePath, "Audi A6 Avant második külső fotó hirdetéshez", "(max-width: 767px) 33vw, 220px" %}
+							</figure>
+						</div>
+						<div class="gallery-package__content">
+							<h3 class="gallery-package__title h4">Audi A6 Avant</h3>
+							<p class="gallery-package__text">Prémium kombi, letisztult külső képekkel és rendezett beltérfotókkal. A cél itt az igényes, bizalomépítő hirdetési megjelenés.</p>
+						</div>
+					</article>
+
+					<article class="gallery-package">
+						<div class="gallery-package__grid">
+							<figure class="gallery-package__image gallery-package__image--main">
+								{% assign imagePath = "./src/assets/images/gallery/sets/ford-mondeo-1.webp" %}
+								{% image imagePath, "Ford Mondeo használtautó fotózás külső fő kép", "(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 600px" %}
+							</figure>
+							<figure class="gallery-package__image">
+								{% assign imagePath = "./src/assets/images/gallery/sets/ford-mondeo-2.webp" %}
+								{% image imagePath, "Ford Mondeo beltérfotó hirdetéshez", "(max-width: 767px) 33vw, 220px" %}
+							</figure>
+							<figure class="gallery-package__image">
+								{% assign imagePath = "./src/assets/images/gallery/sets/ford-mondeo-3.webp" %}
+								{% image imagePath, "Ford Mondeo hátsó üléssor fotó hirdetéshez", "(max-width: 767px) 33vw, 220px" %}
+							</figure>
+							<figure class="gallery-package__image">
+								{% assign imagePath = "./src/assets/images/gallery/sets/ford-mondeo-4.webp" %}
+								{% image imagePath, "Ford Mondeo részletfotó hirdetéshez", "(max-width: 767px) 33vw, 220px" %}
+							</figure>
+						</div>
+						<div class="gallery-package__content">
+							<h3 class="gallery-package__title h4">Ford Mondeo</h3>
+							<p class="gallery-package__text">Használt családi autó hirdetéshez fotózva. Külső, beltér és részletek egy olyan képsorban, amit könnyű feltölteni a hirdetéshez.</p>
+						</div>
+					</article>
+
+					<article class="gallery-package">
+						<div class="gallery-package__grid">
+							<figure class="gallery-package__image gallery-package__image--main">
+								{% assign imagePath = "./src/assets/images/gallery/sets/suzuki-swift-1.webp" %}
+								{% image imagePath, "Suzuki Swift használtautó fotózás külső fő kép", "(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 600px" %}
+							</figure>
+							<figure class="gallery-package__image">
+								{% assign imagePath = "./src/assets/images/gallery/sets/suzuki-swift-2.webp" %}
+								{% image imagePath, "Suzuki Swift műszerfal fotó hirdetéshez", "(max-width: 767px) 33vw, 220px" %}
+							</figure>
+							<figure class="gallery-package__image">
+								{% assign imagePath = "./src/assets/images/gallery/sets/suzuki-swift-3.webp" %}
+								{% image imagePath, "Suzuki Swift beltérfotó hirdetéshez", "(max-width: 767px) 33vw, 220px" %}
+							</figure>
+							<figure class="gallery-package__image">
+								{% assign imagePath = "./src/assets/images/gallery/sets/suzuki-swift-4.webp" %}
+								{% image imagePath, "Suzuki Swift kormány és műszerfal fotó hirdetéshez", "(max-width: 767px) 33vw, 220px" %}
+							</figure>
+						</div>
+						<div class="gallery-package__content">
+							<h3 class="gallery-package__title h4">Suzuki Swift</h3>
+							<p class="gallery-package__text">Egyszerűbb autóknál is működik az igényes bemutatás. A jó képek segítenek, hogy ne egy gyors telefonos hirdetés érzetét kapja a vevő.</p>
+						</div>
+					</article>
+
+					<article class="gallery-package">
+						<div class="gallery-package__grid">
+							<figure class="gallery-package__image gallery-package__image--main">
+								{% assign imagePath = "./src/assets/images/gallery/sets/vw-golf-gte-1.webp" %}
+								{% image imagePath, "Volkswagen Golf GTE használtautó fotózás külső fő kép", "(max-width: 767px) 100vw, (max-width: 1199px) 50vw, 600px" %}
+							</figure>
+							<figure class="gallery-package__image">
+								{% assign imagePath = "./src/assets/images/gallery/sets/vw-golf-gte-2.webp" %}
+								{% image imagePath, "Volkswagen Golf GTE műszerfal fotó hirdetéshez", "(max-width: 767px) 33vw, 220px" %}
+							</figure>
+							<figure class="gallery-package__image">
+								{% assign imagePath = "./src/assets/images/gallery/sets/vw-golf-gte-3.webp" %}
+								{% image imagePath, "Volkswagen Golf GTE beltérfotó hirdetéshez", "(max-width: 767px) 33vw, 220px" %}
+							</figure>
+							<figure class="gallery-package__image">
+								{% assign imagePath = "./src/assets/images/gallery/sets/vw-golf-gte-4.webp" %}
+								{% image imagePath, "Volkswagen Golf GTE részletfotó hirdetéshez", "(max-width: 767px) 33vw, 220px" %}
+							</figure>
+						</div>
+						<div class="gallery-package__content">
+							<h3 class="gallery-package__title h4">Volkswagen Golf GTE</h3>
+							<p class="gallery-package__text">Plug-in hibrid autónál a külső mellett a beltér, a műszerfal és a típusra jellemző részletek is fontos szerepet kapnak.</p>
+						</div>
+					</article>
+				</div>
+				<div class="gallery-more">
+					<h3 class="gallery-more__title h4">További autók, amiket fotóztam</h3>
+					<p class="gallery-more__text">A fotózások között volt hétköznapi családi autó, elektromos kisautó, sportmodell, klasszikus autó és kereskedői készlet is.</p>
+					<div class="gallery-strip" aria-label="További autófotók">
+						{% assign imagePath = "./src/assets/images/gallery/renault-megane-sport-autofotozas-varosban.webp" %}
+						{% image imagePath, "Renault Megane RS sportos használtautó fotózás városi környezetben", "(max-width: 767px) 42vw, 180px" %}
+						{% assign imagePath = "./src/assets/images/gallery/bmw-m2-zandvoort-blue-ipari-hatter.webp" %}
+						{% image imagePath, "BMW M2 autófotózás ipari háttérrel", "(max-width: 767px) 42vw, 180px" %}
+						{% assign imagePath = "./src/assets/images/gallery/audi-rs7-power-division-tuning-auto-fotozas.webp" %}
+						{% image imagePath, "Audi RS7 tuning autó fotózás beltérben", "(max-width: 767px) 42vw, 180px" %}
+						{% assign imagePath = "./src/assets/images/gallery/mercedes-glc-300d-tartos-berles-cegnek.webp" %}
+						{% image imagePath, "Mercedes GLC tartós bérlős cégnek fotózva", "(max-width: 767px) 42vw, 180px" %}
+						{% assign imagePath = "./src/assets/images/gallery/ford-focus-st-sportauto-fotozas-varosban.webp" %}
+						{% image imagePath, "Ford Focus ST autófotózás városi háttérrel", "(max-width: 767px) 42vw, 180px" %}
+						{% assign imagePath = "./src/assets/images/gallery/alfa-romeo-giulia-q4-veloce-autofotozas-parkban.webp" %}
+						{% image imagePath, "Alfa Romeo Giulia Q4 Veloce autófotózás parkban", "(max-width: 767px) 42vw, 180px" %}
+						{% assign imagePath = "./src/assets/images/gallery/mercedes-amg-a45s-autofotozas-ipari-hatterrel.webp" %}
+						{% image imagePath, "Mercedes-AMG A45 S autófotózás ipari háttérrel", "(max-width: 767px) 42vw, 180px" %}
+						{% assign imagePath = "./src/assets/images/gallery/bmw-m850i-luxusauto-fotozas.webp" %}
+						{% image imagePath, "BMW M850i luxusautó fotózás", "(max-width: 767px) 42vw, 180px" %}
+						{% assign imagePath = "./src/assets/images/gallery/bmw-e92-coupe-zold-gyepen.webp" %}
+						{% image imagePath, "BMW E92 Coupé használtautó fotózás zöld környezetben", "(max-width: 767px) 42vw, 180px" %}
+						{% assign imagePath = "./src/assets/images/gallery/mazda-3-hasznalt-auto-kereskedes-fotozas.webp" %}
+						{% image imagePath, "Mazda 3 fotózás használt autó kereskedés számára", "(max-width: 767px) 42vw, 180px" %}
+						{% assign imagePath = "./src/assets/images/gallery/chevrolet-corvette-c3-classic-autofotozas.webp" %}
+						{% image imagePath, "Chevrolet Corvette C3 klasszikus sportautó fotózás", "(max-width: 767px) 42vw, 180px" %}
+						{% assign imagePath = "./src/assets/images/gallery/range-rover-suv-fotozas-erdoben.webp" %}
+						{% image imagePath, "Range Rover SUV fotózás erdei környezetben", "(max-width: 767px) 42vw, 180px" %}
+					</div>
+				</div>
 			</div>
 			<div class="btn-container">
 				<a class="btn" href="#arak">Szeretnék ilyen képeket</a>
@@ -162,10 +340,10 @@ title: Használt Autó Fotózás Budapest
 	<section id="arak" class="section">
 		<div class="container">
 			<h2 class="section__title">Mit kapsz a fotózás után?</h2>
-			<p class="mb-3">A fotózás végén egy kész, hirdetésre optimalizált képanyagot kapsz. Olyan fotókat, amelyeket nyugodtan feltölthetsz a használtautó-hirdetésedhez, mert igényesen, átláthatóan és valósághűen mutatják be az autódat.</p>
+			<p class="mb-3">A fotózás végén egy kész, hirdetésre optimalizált képanyagot kapsz. Olyan képeket adok át, amelyeket azonnal feltölthetsz a használtautó-hirdetésedhez, mert igényesen, átláthatóan és valósághűen mutatják be az autódat.</p>
 			<article class="plan plan--basic">
 				<div class="plan__text">
-					<h3 class="plan__name">Profi használtautó-fotózás</h3>
+					<h3 class="plan__name">Használtautó-fotózás 1 óra alatt</h3>
 					<ul>
 						<li><i class="fas fa-check-circle text-green"></i>&nbsp; legalább 12 gondosan válogatott, utómunkázott fotó</li>
 						<li><i class="fas fa-check-circle text-green"></i>&nbsp; külső képek, beltérfotók és fontos részletek</li>
@@ -174,7 +352,7 @@ title: Használt Autó Fotózás Budapest
 						<li><i class="fas fa-check-circle text-green"></i>&nbsp; átadás 24 órán belül</li>
 					</ul>
 					<p class="plan__price plan__price--new h1"><ins>29.900 Ft</ins></p>
-					<p class="plan__disclaimer">A fotózás általában 30–60 percet vesz igénybe. Budapesten belül nincs külön kiszállási díj, a pontos helyszínt együtt választjuk ki.</p>
+					<p class="plan__disclaimer">Budapesten belül nincs külön kiszállási díj, a pontos helyszínt együtt választjuk ki.</p>
 				</div>
 				<img class="plan__photo" src="/assets/images/plan-photo.webp" alt="Használt Autó Fotózás" width="1000" height="667" loading="lazy" fetchpriority="low" decoding="async">
 			</article>
