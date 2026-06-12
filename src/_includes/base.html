@@ -5,13 +5,17 @@
 		<title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<meta name="description" content="{{ site.description_short }}">
-		<meta name="author" content="{{ site.author.name }}">
+		<meta name="description" content="{{ description | default: site.description_short }}">
+		<link rel="canonical" href="{{ site.url }}{{ page.url }}">
 		<meta name="robots" content="max-image-preview:large">
+		<meta name="author" content="{{ site.author.name }}">
 		<link rel="canonical" href="{{ site.url }}/">
 
 		<!-- Styles -->
 		<link rel="stylesheet" href="/assets/css/style.css">
+		{% if css %}
+			<link rel="stylesheet" href="{{ css }}">
+		{% endif %}
 
 		<!-- Scripts -->
 		<script src="/assets/js/main.js" defer></script>
@@ -34,7 +38,7 @@
 		<meta property="og:locale" content="{{ site.locale }}">
 		<meta property="og:title" content="{{ site.title }} | {{ site.tagline }}">
 		<meta property="og:description" content="{{ site.description_long }}">
-		<meta property="og:image" content="https://hasznaltautofotozas.hu/assets/images/og_image.webp">
+		<meta property="og:image" content="og_image | default: https://hasznaltautofotozas.hu/assets/images/og_image.webp">
 
 		<!-- Twitter/X Card -->
 		<meta name="twitter:card" content="summary_large_image">
@@ -42,7 +46,7 @@
 		<meta name="twitter:creator" content="@szabokaphoto">
 		<meta name="twitter:title" content="{{ site.title }} | {{ site.tagline }}">
 		<meta name="twitter:description" content="{{ site.description_long }}">
-		<meta name="twitter:image" content="https://hasznaltautofotozas.hu/assets/images/og_image.webp">
+		<meta name="twitter:image" content="og_image | default: https://hasznaltautofotozas.hu/assets/images/og_image.webp">
 		<meta name="twitter:image:alt" content="{{ site.title }} | {{ site.tagline }}">
 
 		<!-- Ahrefs Analytics -->
@@ -50,6 +54,18 @@
 	</head>
 
 	<body>
+		<a class="skip-link" href="#tartalom">Ugrás a tartalomra</a>
+
+		<header class="site-header">
+			<div class="container">
+				<nav class="site-nav" aria-label="Fő navigáció">
+					<a class="site-nav__link" href="/" {% if page.url == "/" %}aria-current="page"{% endif %}>Használtautó Fotózás</a>
+					<a class="site-nav__link" href="/tippek/" {% if page.url contains "/tippek/" %}aria-current="page"{% endif %}>Eladási Tippek</a>
+					<!-- <a class="site-nav__link" href="tel:+36205914620">Hívj Telefonon</a> -->
+				</nav>
+			</div>
+		</header>
+
 		{{ content }}
 	</body>
 </html>

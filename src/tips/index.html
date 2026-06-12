@@ -1,0 +1,105 @@
+---
+layout: base.html
+title: Használt Autó Eladási Tippek
+description: Tippek használt autó eladáshoz, jobb hirdetési képekhez, hirdetésszöveghez és kereskedői készletfotózáshoz.
+permalink: /tippek/
+css: /assets/css/tips.css
+---
+
+<main id="tartalom" class="main">
+	<!-- <header class="section tips-hero">
+		<div class="container">
+			<h1 class="tips-hero__title h1">Eladási Tippek</h1>
+			<p class="tips-hero__text">Tippek használt autó eladáshoz, jobb hirdetési képekhez és komolyabban vehető autóhirdetéshez. Fotózásról, előkészítésről, hirdetésszövegről és kereskedői készletfotózásról, emberi nyelven.</p>
+		</div>
+	</header> -->
+
+	{% assign allTips = collections.tips | sort: "data.order" %}
+	{% assign featuredTips = allTips | where: "data.featured", true | sort: "data.featured_order" %}
+
+	{% if featuredTips.length > 0 %}
+		<section class="section tips-start">
+			<div class="container">
+				<header class="tips-section-header">
+					<p class="eyebrow">Kezdd itt</p>
+					<h2 class="section__title">A legfontosabb tippek első körben</h2>
+					<p class="tips-section-header__text">Ezekkel érdemes kezdeni, ha most készülsz meghirdetni az autódat, és nem szeretnéd elrontani az első benyomást.</p>
+				</header>
+
+				<div class="tips-featured">
+					{% for tip in featuredTips %}
+						<article class="tip-card tip-card--featured">
+							{% if tip.data.featured_image %}
+								<a class="tip-card__image-link" href="{{ tip.url }}" aria-label="{{ tip.data.title }}">
+									<img class="tip-card__image" src="{{ tip.data.featured_image }}" alt="{{ tip.data.featured_image_alt }}" loading="lazy" decoding="async">
+								</a>
+							{% endif %}
+
+							<div class="tip-card__content">
+								<h3 class="tip-card__title h4">
+									<a href="{{ tip.url }}">{{ tip.data.title }}</a>
+								</h3>
+
+								{% if tip.data.summary %}
+									<p class="tip-card__summary">{{ tip.data.summary }}</p>
+								{% endif %}
+							</div>
+						</article>
+					{% endfor %}
+				</div>
+			</div>
+		</section>
+	{% endif %}
+
+	<!-- <section class="section tips-topics">
+		<div class="container">
+			<header class="tips-section-header">
+				<p class="eyebrow">Témák szerint</p>
+			</header>
+
+			{% for topic in topics %}
+				{% assign topicTips = allTips | where: "data.topic", topic.key %}
+
+				{% if topicTips.length > 0 %}
+					<section class="tips-topic" aria-labelledby="topic-{{ topic.key }}">
+						<header class="tips-topic__header">
+							<h3 id="topic-{{ topic.key }}" class="tips-topic__title h3">{{ topic.title }}</h3>
+						</header>
+
+						<div class="tips-grid">
+							{% for tip in topicTips %}
+								<article class="tip-card">
+									{% if tip.data.featured_image %}
+										<a class="tip-card__image-link" href="{{ tip.url }}" aria-label="{{ tip.data.title }}">
+											<img class="tip-card__image" src="{{ tip.data.featured_image }}" alt="{{ tip.data.featured_image_alt }}" loading="lazy" decoding="async">
+										</a>
+									{% endif %}
+
+									<div class="tip-card__content">
+										<h4 class="tip-card__title h4">
+											<a href="{{ tip.url }}">{{ tip.data.title }}</a>
+										</h4>
+
+										{% if tip.data.summary %}
+											<p class="tip-card__summary">{{ tip.data.summary }}</p>
+										{% endif %}
+									</div>
+								</article>
+							{% endfor %}
+						</div>
+					</section>
+				{% endif %}
+			{% endfor %}
+		</div>
+	</section> -->
+
+	<!-- <section class="section section--light">
+		<div class="container">
+			<div class="callout tips-cta">
+				<h2 class="callout__title">Inkább megoldanád egyszerűen?</h2>
+				<p>Ha nem szeretnél helyszínt, fényt, szögeket és képméreteket sakkozni, lefotózom az autódat hirdetésre kész állapotban.</p>
+				<a class="btn" href="/#kapcsolat">Visszahívást kérek</a>
+			</div>
+		</div>
+	</section> -->
+</main>

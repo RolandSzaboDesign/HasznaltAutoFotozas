@@ -243,6 +243,10 @@ img {
 	}
 }
 
+.container--thin {
+	max-width: 100rem;
+}
+
 
 
 /* Sections */
@@ -468,7 +472,7 @@ ul.list {
 }
 
 ol.list {
-	margin-left: 2rem;
+	margin-left: 3rem;
 	list-style-type: decimal;
 }
 
@@ -520,6 +524,7 @@ figcaption {
 .text-center { text-align: center; }
 
 .text-light { color: var(--text-light); }
+.text-dark { color: var(--text-dark); }
 .text-red { color: var(--red); }
 .text-accent { color: var(--accent); }
 .text-green { color: var(--green); }
@@ -1736,6 +1741,98 @@ figcaption {
 	margin: 0 auto;
 	border: .5rem solid var(--bg-light);
 	border-radius: 1rem;
+}
+
+
+
+/* Header */
+
+.skip-link {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	z-index: 100;
+	padding: .8rem 1.2rem;
+	color: var(--bg-dark);
+	font-weight: 600;
+	border: 0;
+	border-radius: 99rem;
+	background-color: var(--accent-light);
+	transform: translateY(-150%);
+}
+
+.skip-link:focus {
+	transform: translateY(0);
+}
+
+.site-header {
+	position: relative;
+	z-index: 10;
+	background:
+		radial-gradient(circle at 82% 0%, var(--surface-glow-soft), transparent 28rem),
+		linear-gradient(135deg, rgba(255,255,255,.035), rgba(255,255,255,.006)),
+		var(--bg-dark);
+	border-bottom: 1px solid var(--surface-border);
+}
+
+.site-nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: .8rem;
+	padding-top: 1.4rem;
+	padding-bottom: 1.4rem;
+}
+
+@media only screen and (max-width: 575.98px) {
+	.site-nav {
+		justify-content: flex-start;
+		overflow-x: auto;
+		overflow-y: hidden;
+		gap: .6rem;
+		margin-left: -1rem;
+		margin-right: -1rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		scrollbar-width: none;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.site-nav::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+.site-nav__link {
+	flex: 0 0 auto;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: .75rem 1.2rem;
+	color: var(--text);
+	font-weight: 600;
+	font-size: 1.5rem;
+	line-height: 1.2;
+	white-space: nowrap;
+	border: 1px solid transparent;
+	border-radius: 99rem;
+}
+
+@media only screen and (max-width: 575.98px) {
+	.site-nav__link {
+		padding: .7rem 1rem;
+		font-size: 1.35rem;
+	}
+}
+
+.site-nav__link:hover,
+.site-nav__link:focus,
+.site-nav__link[aria-current="page"] {
+	color: var(--text-light);
+	border-color: var(--surface-border-strong);
+	background:
+		radial-gradient(circle at 50% 0%, rgba(244, 239, 231, .08), transparent 70%),
+		rgba(255,255,255,.025);
 }
 
 

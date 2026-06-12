@@ -41,6 +41,15 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 	eleventyConfig.addLiquidShortcode("image", imageShortcode);
 
+	// --- TIPS COLLECTION ---
+	eleventyConfig.addCollection("tips", function(collectionApi) {
+		return collectionApi
+			.getFilteredByTag("tips")
+			.sort((a, b) => {
+				return (a.data.order || 999) - (b.data.order || 999);
+			});
+	});
+
 	// --- DIRECTORIES ---
 	return {
 		dir: {

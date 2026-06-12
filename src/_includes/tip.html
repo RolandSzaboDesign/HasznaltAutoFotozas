@@ -1,0 +1,41 @@
+---
+layout: base.html
+css: /assets/css/tips.css
+---
+
+<main id="tartalom" class="main">
+	<article class="tip-article">
+		<header class="tip-hero{% if featured_image %} tip-hero--has-image{% endif %}"{% if featured_image %} style="--tip-hero-image: url('{{ featured_image }}');"{% endif %}>
+			<div class="container">
+				<div class="tip-hero__content">
+					<p class="eyebrow">Eladási Tippek</p>
+					<h1 class="tip-hero__title">{{ title }}</h1>
+					<p class="tip-hero__lead">{{ summary }}</p>
+				</div>
+			</div>
+		</header>
+
+		<div class="section">
+			<div class="container container--thin tip-article__content">
+				{{ content }}
+			</div>
+		</div>
+	</article>
+
+	<section class="section tip-cta-section">
+		<div class="container">
+			<div class="tip-cta">
+				<div class="tip-cta__content">
+					<p class="eyebrow">Használtautó-fotózás</p>
+					<h2 class="tip-cta__title">Szeretnéd, hogy az autód jobban nézzen ki a hirdetésben?</h2>
+					<p class="tip-cta__text">Budapesten és környékén hirdetésre optimalizált autófotókat készítek, 24 órán belüli átadással.</p>
+				</div>
+
+				<div class="tip-cta__actions">
+					<!-- <a class="btn" href="/#kapcsolat">Visszahívást kérek</a> -->
+					<a class="btn" href="/">Ennyire egyszerű</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
