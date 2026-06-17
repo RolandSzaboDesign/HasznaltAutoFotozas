@@ -1,5 +1,19 @@
 [
 	{
+		"author": "Tamás",
+		"car": "Kia Ceed",
+		"text": "A képek nagyon jók lettek és minden nagyon flottul ment. A helyszín, időpont egyeztetés, autó beállítása, stb, gyors és hatékony volt. Emellett még jó fej is, szóval csak ajánlani tudom.",
+		"image": "/assets/images/quote/quote-tamas.webp",
+		"image_sm": "/assets/images/quote/quote-tamas--sm.webp"
+	},
+	{
+		"author": "Laci",
+		"car": "Porsche Cayman",
+		"text": "Felraktam az új kepeket tegnap Marketplacere. Ma már ketten írtak a kocsira, hogy milyen szép!",
+		"image": "/assets/images/quote/quote-laci.webp",
+		"image_sm": "/assets/images/quote/quote-laci--sm.webp"
+	},
+	{
 		"author": "Barni",
 		"car": "Kia Ceed SW",
 		"text": "Az autó fotózás után napokon belül el is adtam a kocsit. Roland nélkül szerintem még most is hirdetném.",
