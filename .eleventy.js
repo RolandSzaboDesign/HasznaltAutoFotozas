@@ -41,6 +41,77 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 	eleventyConfig.addLiquidShortcode("image", imageShortcode);
 
+	// --- TIP MEDIA IMAGE SHORTCODE ---
+	function getTipMediaImageSizes(columns = 1) {
+		const columnCount = Number(columns);
+
+		if (columnCount === 3) {
+			return "(min-width: 1060px) calc((100rem - 2.4rem) / 3), (min-width: 576px) calc((100vw - 6.4rem) / 3), calc(100vw - 4rem)";
+		}
+
+		if (columnCount === 2) {
+			return "(min-width: 1060px) calc((100rem - 1.2rem) / 2), (min-width: 576px) calc((100vw - 5.2rem) / 2), calc(100vw - 4rem)";
+		}
+
+		return "(min-width: 1060px) 100rem, calc(100vw - 4rem)";
+	}
+
+	function getTipMediaImageWidths(columns = 1) {
+		const columnCount = Number(columns);
+
+		if (columnCount === 3) {
+			return [320, 480, 640];
+		}
+
+		if (columnCount === 2) {
+			return [480, 640, 800];
+		}
+
+		return [640, 800, 960, 1200];
+	}
+
+	function getTipMediaImageInputPath(src) {
+		if (src.startsWith("./src/")) {
+			return src;
+		}
+
+		const cleanSrc = src.replace(/^\/+/, "");
+		return `./src/${cleanSrc}`;
+	}
+
+	async function tipMediaImageShortcode(src, alt, columns = 1, className = "tip-media__image") {
+		const columnCount = Number(columns);
+
+		const metadata = await Image(getTipMediaImageInputPath(src), {
+			widths: getTipMediaImageWidths(columnCount),
+			formats: ["webp"],
+			urlPath: "/assets/images/tips/generated/",
+			outputDir: "./public/assets/images/tips/generated/",
+			filenameFormat: function (id, src, width, format) {
+				const { name } = path.parse(src);
+				return `${name}-${width}.${format}`;
+			},
+			sharpWebpOptions: {
+				quality: 85
+			}
+		});
+
+		const imageAttributes = {
+			alt,
+			sizes: getTipMediaImageSizes(columnCount),
+			loading: "lazy",
+			decoding: "async",
+			class: className
+		};
+
+		return Image.generateHTML(metadata, imageAttributes, {
+			whitespaceMode: "inline"
+		});
+	}
+
+	eleventyConfig.addNunjucksAsyncShortcode("tipMediaImage", tipMediaImageShortcode);
+	eleventyConfig.addLiquidShortcode("tipMediaImage", tipMediaImageShortcode);
+
 	// --- TIPS COLLECTION ---
 	eleventyConfig.addCollection("tips", function(collectionApi) {
 		return collectionApi
