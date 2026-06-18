@@ -1,0 +1,46 @@
+---
+layout: tip.html
+title: Miért nem működik ez az autóhirdetés-fotó? Gyakori hibák példákkal
+description: "Gyakori hibák használtautó hirdetésfotókon: rossz fény, zavaró háttér, ferde szög, koszos beltér, hiányzó részletek és gyenge első benyomás."
+permalink: /tippek/gyakori-hibak-hasznaltauto-hirdetes-fotokon/
+tags: tips
+topic: photography
+summary: Egy autót le lehet fotózni úgy is, hogy minden látszik rajta, mégsem lesz kívánatos. Ebben a cikkben konkrét példákon nézzük meg, mitől lesz gyenge egy hirdetésfotó, és mit lehetne helyette csinálni.
+featured: false
+order: 4
+featured_image: /assets/images/tips/gyakori-hibak-hasznaltauto-hirdetes-fotokon.webp
+featured_image_alt: Gyakori hibák használtautó hirdetésfotókon
+---
+
+<p>Az autóhirdetés fotója nem csak arra való, hogy bizonyítsa: igen, az autó létezik. Ennél sokkal többet kellene csinálnia.</p>
+<p>A jó kép felkelti az érdeklődést. A vevő ránéz, és azt érzi: “ezt érdemes megnézni.” A gyenge kép ezzel szemben lehúzza az autót, még akkor is, ha az autó amúgy jó állapotú.</p>
+<p>Ebben a cikkben pár tipikus hirdetésfotós hibán megyünk végig. Nem az a cél, hogy bárkit kinevessünk. A cél az, hogy lásd: sokszor nem az autóval van baj, hanem azzal, ahogy a hirdetés bemutatja.</p>
+
+<h2>1. hirdetés: 2008 Seat Ibiza</h2>
+<p>Első alanyunk az alábbi szöveggel lett feltéve Marketplace-re:</p>
+<blockquote class="">
+	<p>"Eladó női tulajdonostól egy 2008.11.havi fekete Seat Ibiza. Rendszeresen karbantartott, megkímélt,230000km futott autó. (Jelenleg is használatban van) 1.2-es 12v motorral és 5 sebességes váltóval. 2 szezont futott nyári és 2 szezont futott könnyű fém felnis téli gumikkal. Az autóban elektromos ablak, centrál zár, multikormány, jéghideg klima, pótkerék, AUX csatlakozó van! Veresegyház és Budapest környékén megtekinthető."</p>
+</blockquote>
+<div class="tip-media tip-media--2">
+	<figure class="tip-media__item">
+		{% tipMediaImage "/assets/images/tips/gyakori-hibak-hasznaltauto-hirdetes-fotokon-2.webp" "Ferde, túl közelről készült használtautó hirdetésfotó" 2 %}
+		<figcaption class="tip-media__caption">Ez a főkép. Az autó túl közel van, az ajtó valamiért nyitva van, a kép pedig ferde, zsúfolt és nem ad jó első benyomást.</figcaption>
+	</figure>
+	<figure class="tip-media__item">
+		{% tipMediaImage "/assets/images/tips/gyakori-hibak-hasznaltauto-hirdetes-fotokon-3.webp" "Autómosóban habosan fotózott használtautó hirdetésfotó" 2 %}
+		<figcaption class="tip-media__caption">Mit kap a látogató abból, ha habosan látja az autót egy képen? A mosós kép nem hirdetésfotó. Bónuszként a tulajdonos is rajta van a képen, itt már csak cenzúrázva.</figcaption>
+	</figure>
+	<figure class="tip-media__item">
+		{% tipMediaImage "/assets/images/tips/gyakori-hibak-hasznaltauto-hirdetes-fotokon-4.webp" "Homályos használtautó beltérfotó szürke műszerfallal" 2 %}
+		<figcaption class="tip-media__caption">A beltérről készült képen a fókusz nem a műszerfalon van, hanem a háttéren.</figcaption>
+	</figure>
+	<figure class="tip-media__item">
+		{% tipMediaImage "/assets/images/tips/gyakori-hibak-hasznaltauto-hirdetes-fotokon-5.webp" "Régi autókereskedés használt autó fotója autó hirdetésben" 2 %}
+		<figcaption class="tip-media__caption">Van egy olyan kép is, amit még a kereskedőtől való vásárláskor mentett le magának.</figcaption>
+	</figure>
+</div>
+
+<h3>Mi az első benyomás?</h3>
+<p>Az első benyomás nem az, hogy “ezt az autót jó lenne megnézni”, hanem az, hogy gyorsan készült pár kép, aztán felkerült a hirdetés. Lehet, hogy az autó teljesen rendben van, de a képek alapján nem ezt érzi a vevő.</p>
+
+<p>És ez csak néhány esettanulmány egy gyors Marketplace böngészésből. A cikk írásakor találtam olyan BMW X6-ost, ahol az ülések között sír a gyerek, de volt olyan Mini is, aminek mind a kettő fotóján egy macska ült a motorháztetőn. Az abszolút kedvencem viszont az az Audi A6 volt, amit közelről panoráma módban fotózott telefonnal a gazdája.</p>
