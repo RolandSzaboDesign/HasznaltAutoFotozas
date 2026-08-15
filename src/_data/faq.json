@@ -5,7 +5,7 @@
   },
   {
     "question": "Mennyi ideig tart a fotózás?",
-    "answer": "Általában 30–60 perc alatt elkészülünk. Ez autótól, helyszíntől és részletfotóktól is függ, de nem kell egész délutános programra készülnöd."
+    "answer": "Maga a fotózás általában 30–60 perc. Ha fotózás előtti előkészítést is kérsz, arra további körülbelül 30–45 percet érdemes számolni. Ha az autót előtte mosóba is el kell vinnünk, ennél valamivel több időre lehet szükség."
   },
   {
     "question": "Mikor kapom meg a képeket?",
@@ -13,7 +13,15 @@
   },
   {
     "question": "Mit kell előkészítenem a fotózás előtt?",
-    "answer": "A legfontosabb, hogy az autó kívül-belül tisztán érkezzen. A beltérből érdemes kivenni minden személyes tárgyat, üdítős dobozt, illatosítót, kábeleket és apróságokat."
+    "answer": "Ha csak a fotózást kéred, az autó kívül-belül tisztán és rendezett állapotban érkezzen. A beltérből érdemes kivenni a személyes tárgyakat, flakonokat, kábeleket, illatosítót és minden olyan apróságot, ami zavaró lehet a képeken. Ha előkészítéssel kéred a fotózást, a kisebb tisztításokkal és a képeken látványosan számító felületek rendbetételével én foglalkozom."
+  },
+  {
+    "question": "Mit jelent a fotózás előtti előkészítés?",
+    "answer": "Az előkészítés egy körülbelül 30–45 perces, célzott kozmetikai rendbetétel közvetlenül a fotózás előtt. Megtisztítom az üvegeket, felniket, gumikat és a szükséges külső vagy belső felületeket, a gumikat és műanyagokat pedig szükség szerint ápolom. Kisebb, helyileg kezelhető foltokkal is foglalkozom. Arra koncentrálok, ami a kész képeken látványosan javítja az autó megjelenését. Ha az autó állapota miatt egy helyszíni áttörlés már nem elég, a fotózás előtt önkiszolgáló kézi mosóba is el tudunk menni; ez plusz idővel jár, a mosás díja külön fizetendő."
+  },
+  {
+    "question": "Ez teljes körű autókozmetika?",
+    "answer": "Nem. Az előkészítés célja, hogy az autó a lehető legjobban mutasson a fotókon, ezért elsősorban a látványosan számító felületekre és részletekre koncentrálok. Nem végzek teljes detailinget, polírozást, gépi kárpittisztítást vagy többórás mélytisztítást. Erősen szennyezett autónál előre egyeztetjük, mire van reálisan lehetőség a fotózás előtt."
   },
   {
     "question": "Készülnek beltérfotók is?",
@@ -25,7 +33,7 @@
   },
   {
     "question": "Mi történik rossz idő esetén?",
-    "answer": "A felhős idő nem gond, sokszor kifejezetten jól működik autófotózáshoz. Esőben viszont általában új időpontot egyeztetünk, mert a vizes autó félrevezető lehet, és a tisztaságot is nehéz tartani."
+    "answer": "A felhős idő nem gond, sokszor kifejezetten jól működik autófotózáshoz. Esőben viszont általában új időpontot egyeztetünk, mert a vizes autó félrevezető lehet, és a tisztaságot is nehéz tartani. Ha előkészítést is kérsz, az időjárást különösen figyelembe vesszük az időpont egyeztetésénél."
   },
   {
     "question": "Vidékre is kimész?",

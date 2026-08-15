@@ -7,9 +7,8 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<meta name="description" content="{{ description | default: site.description_short }}">
 		<link rel="canonical" href="{{ site.url }}{{ page.url }}">
-		<meta name="robots" content="max-image-preview:large">
+		<meta name="robots" content="{{ robots | default: 'max-image-preview:large' }}">
 		<meta name="author" content="{{ site.author.name }}">
-		<link rel="canonical" href="{{ site.url }}/">
 
 		<!-- Styles -->
 		<link rel="stylesheet" href="/assets/css/style.css">
@@ -34,19 +33,19 @@
 		<!-- OpenGraph -->
 		<meta property="og:type" content="website">
 		<meta property="og:site_name" content="{{ site.title }}">
-		<meta property="og:url" content="{{ site.url }}/">
+		<meta property="og:url" content="{{ site.url }}{{ page.url }}">
 		<meta property="og:locale" content="{{ site.locale }}">
-		<meta property="og:title" content="{{ site.title }} | {{ site.tagline }}">
-		<meta property="og:description" content="{{ site.description_long }}">
-		<meta property="og:image" content="og_image | default: https://hasznaltautofotozas.hu/assets/images/og_image.webp">
+		<meta property="og:title" content="{% if title %}{{ title }} | {% endif %}{{ site.title }}">
+		<meta property="og:description" content="{{ description | default: site.description_long }}">
+		<meta property="og:image" content="{{ site.url }}{{ og_image | default: '/assets/images/og_image.webp' }}">
 
 		<!-- Twitter/X Card -->
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:site" content="@szabokaphoto">
 		<meta name="twitter:creator" content="@szabokaphoto">
-		<meta name="twitter:title" content="{{ site.title }} | {{ site.tagline }}">
-		<meta name="twitter:description" content="{{ site.description_long }}">
-		<meta name="twitter:image" content="og_image | default: https://hasznaltautofotozas.hu/assets/images/og_image.webp">
+		<meta name="twitter:title" content="{% if title %}{{ title }} | {% endif %}{{ site.title }}">
+		<meta name="twitter:description" content="{{ description | default: site.description_long }}">
+		<meta name="twitter:image" content="{{ site.url }}{{ og_image | default: '/assets/images/og_image.webp' }}">
 		<meta name="twitter:image:alt" content="{{ site.title }} | {{ site.tagline }}">
 
 		<!-- Ahrefs Analytics -->
@@ -59,9 +58,8 @@
 		<header class="site-header">
 			<div class="container">
 				<nav class="site-nav" aria-label="Fő navigáció">
-					<a class="site-nav__link" href="/" {% if page.url == "/" %}aria-current="page"{% endif %}>Használtautó Fotózás</a>
-					<a class="site-nav__link" href="/tippek/" {% if page.url contains "/tippek/" %}aria-current="page"{% endif %}>Eladási Tippek</a>
-					<!-- <a class="site-nav__link" href="tel:+36205914620">Hívj Telefonon</a> -->
+					<a class="site-nav__link" href="/" {% if page.url == "/" %}aria-current="page"{% endif %}>Használtautó fotózás</a>
+					<a class="site-nav__link" href="/tippek/" {% if page.url contains "/tippek/" %}aria-current="page"{% endif %}>Eladási tippek</a>
 				</nav>
 			</div>
 		</header>
