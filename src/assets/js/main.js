@@ -142,3 +142,40 @@ lightbox.addEventListener('touchend', (e) => {
 }, { passive: true });
 
 lightboxOverlay.addEventListener('click', hideLightbox);
+
+
+
+// Ahrefs Section Tracking
+function sendAhrefsEvent(eventName, props = {}, retries = 20) {
+	if (window.AhrefsAnalytics != null) {
+		window.AhrefsAnalytics.sendEvent(eventName, { props });
+		return;
+	}
+
+	if (retries > 0) {
+		window.setTimeout(() => sendAhrefsEvent(eventName, props, retries - 1), 250);
+	}
+}
+
+const ahrefsSections = document.querySelectorAll('[data-ahrefs-section]');
+
+if (ahrefsSections.length) {
+	const ahrefsSectionObserver = new IntersectionObserver((entries, observer) => {
+		entries.forEach((entry) => {
+			if (!entry.isIntersecting) return;
+
+			sendAhrefsEvent('section_view', {
+				section: entry.target.dataset.ahrefsSection
+			});
+
+			observer.unobserve(entry.target);
+		});
+	}, {
+		rootMargin: '0px 0px -60% 0px',
+		threshold: 0
+	});
+
+	ahrefsSections.forEach((section) => {
+		ahrefsSectionObserver.observe(section);
+	});
+}
