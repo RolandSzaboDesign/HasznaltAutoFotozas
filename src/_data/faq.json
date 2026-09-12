@@ -1,50 +1,18 @@
 [
   {
-    "question": "Hol történik a fotózás?",
-    "answer": "A helyszínt közösen választjuk ki. Általában olyan helyet keresünk, ami neked is kényelmes, és az autónak is jól áll. Budapesten belül nincs külön kiszállási díj."
-  },
-  {
-    "question": "Mennyi ideig tart a fotózás?",
-    "answer": "Maga a fotózás általában 30–60 perc. Ha fotózás előtti előkészítést is kérsz, arra további körülbelül 30–45 percet érdemes számolni. Ha az autót előtte mosóba is el kell vinnünk, ennél valamivel több időre lehet szükség."
-  },
-  {
-    "question": "Mikor kapom meg a képeket?",
-    "answer": "A kész képeket 24 órán belül átadom Google Drive mappában. Megkapod őket teljes méretben, valamint hirdetéshez optimalizált, 2000 px széles változatban is."
-  },
-  {
-    "question": "Mit kell előkészítenem a fotózás előtt?",
-    "answer": "Ha csak a fotózást kéred, az autó kívül-belül tisztán és rendezett állapotban érkezzen. A beltérből érdemes kivenni a személyes tárgyakat, flakonokat, kábeleket, illatosítót és minden olyan apróságot, ami zavaró lehet a képeken. Ha előkészítéssel kéred a fotózást, a kisebb tisztításokkal és a képeken látványosan számító felületek rendbetételével én foglalkozom."
-  },
-  {
-    "question": "Mit jelent a fotózás előtti előkészítés?",
-    "answer": "Az előkészítés egy körülbelül 30–45 perces, célzott kozmetikai rendbetétel közvetlenül a fotózás előtt. Megtisztítom az üvegeket, felniket, gumikat és a szükséges külső vagy belső felületeket, a gumikat és műanyagokat pedig szükség szerint ápolom. Kisebb, helyileg kezelhető foltokkal is foglalkozom. Arra koncentrálok, ami a kész képeken látványosan javítja az autó megjelenését. Ha az autó állapota miatt egy helyszíni áttörlés már nem elég, a fotózás előtt önkiszolgáló kézi mosóba is el tudunk menni; ez plusz idővel jár, a mosás díja külön fizetendő."
-  },
-  {
-    "question": "Ez teljes körű autókozmetika?",
-    "answer": "Nem. Az előkészítés célja, hogy az autó a lehető legjobban mutasson a fotókon, ezért elsősorban a látványosan számító felületekre és részletekre koncentrálok. Nem végzek teljes detailinget, polírozást, gépi kárpittisztítást vagy többórás mélytisztítást. Erősen szennyezett autónál előre egyeztetjük, mire van reálisan lehetőség a fotózás előtt."
-  },
-  {
-    "question": "Készülnek beltérfotók is?",
-    "answer": "Igen. Külső képek, beltérfotók és fontos részletek is készülnek. Ha van különleges felszereltség, modelljelzés vagy olyan elem, amit érdemes megmutatni, azt külön befotózom."
-  },
-  {
-    "question": "Eltünteted a hibákat az autóról?",
-    "answer": "Az autó állapotát nem írom át képszerkesztéssel. A cél az igényes, valósághű bemutatás. Zavaró háttérelemeket, tükröződéseket vagy apró vizuális zavarokat javítok, ahol szükséges."
+    "question": "Hol készülnek a képek?",
+    "answer": "A helyszínt az autóhoz és az időjáráshoz választjuk. Nem kell előre helyszínt keresned: megbeszéljük, mi lenne kényelmes, és javaslok olyan környezetet, ahol az autó jól mutat és nyugodtan lehet fotózni."
   },
   {
     "question": "Mi történik rossz idő esetén?",
-    "answer": "A felhős idő nem gond, sokszor kifejezetten jól működik autófotózáshoz. Esőben viszont általában új időpontot egyeztetünk, mert a vizes autó félrevezető lehet, és a tisztaságot is nehéz tartani. Ha előkészítést is kérsz, az időjárást különösen figyelembe vesszük az időpont egyeztetésénél."
+    "answer": "A felhős idő nem gond, sokszor kifejezetten jól működik autófotózáshoz. Tartós esőben általában új időpontot egyeztetünk, hogy tiszta és következetes képanyagot tudjak készíteni."
+  },
+  {
+    "question": "Eltünteted a hibákat az autóról?",
+    "answer": "Nem. A cél az igényes, valósághű bemutatás. Zavaró háttérelemeket, tükröződéseket és apró vizuális zavarokat javítok, de az autó valódi állapotát nem írom át képszerkesztéssel."
   },
   {
     "question": "Vidékre is kimész?",
     "answer": "Igen, megbeszélés szerint. Budapesten belül nincs külön kiszállási díj, vidéki fotózásnál a helyszín és a távolság alapján egyeztetünk."
-  },
-  {
-    "question": "Írsz hirdetésszöveget is?",
-    "answer": "Alapból a szolgáltatás a fotózásról szól, de szívesen adok tanácsot a hirdetésedhez. Ha szeretnéd, megbeszéljük, hogyan érdemes bemutatni az autót a képek mellé."
-  },
-  {
-    "question": "Kereskedésnek is vállalsz fotózást?",
-    "answer": "Igen. Több autó esetén egyedi árat adok, és egységes képi stílusban tudjuk befotózni a készletet. Keress bátran egyedi ajánlatért."
   }
 ]
